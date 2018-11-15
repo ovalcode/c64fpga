@@ -29,5 +29,6 @@ git clone https://github.com/ovalcode/c64fpga
 You now need to create the project files that Vivado understands. I have provided a tcl scripts for generating the project files.
 
 To use this tcl script startup Vivado, but don't open up any projects yet. At the bottom of the Vivado IDE, you will see a TCL console. Click on the TCL command prompt as shown below:
+[logo]
 
 [logo]: https://github.com/ovalcode/c64fpga/blob/master/images/vivadointro.png
