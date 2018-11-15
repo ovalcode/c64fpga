@@ -9,4 +9,4 @@ Some features include:
 - VGA output of VIC-II
 - *Planned*: Interaction with the C64 with a USB keyboard
 
-For a Tutorial on how this implementation is developed in a incremental way, please see [my Blog Series](c64onfpga.blogspot.com)
+For a Tutorial on how this implementation is developed in a incremental way, please see [my Blog Series](http://c64onfpga.blogspot.com/)
