@@ -33,3 +33,8 @@ To use this tcl script startup Vivado, but don't open up any projects yet. At th
 ![logo]
 
 [logo]: https://github.com/ovalcode/c64fpga/blob/master/images/vivadointro.png
+
+Now cd into directory into which you have cloned the source earlier on.
+
+Now invoke the tcl script with the following command:
+
