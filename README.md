@@ -41,3 +41,14 @@ Now invoke the tcl script with the following command:
 ```
 source c64_proj.tcl
 ```
+This will create all the project files.
+
+You can then proceed to Synthesise, create bitstream and launch Xilinx SDK.
+
+## Modules
+The C64 FPGA consists out of a couple of key modules. In this section I list them and give a brief description of each. All these modules is located withinthe IP folder.
+
+- bblock: This forms the core of the C64 system. It outputs VIC-II frames to SDRAM via an AXI interfcae. It also receives keystrokes.
+- myip_burst_read_test_1.0: Encapsulates AXI functionality for reading from SDRAM. The VGA output generation block uses this module to read back produced VIC-II frames for display purposes.
+- myip_burst_test_1.0: Encapsulates AXI functioanlity for writing to SDRAM. bblock uses this block to save produced VIC-II frames to SDRAM
+- vga_block_c64: Generates VGA output signal from VIC-II frames stored in SDRAM.
