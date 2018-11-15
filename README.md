@@ -5,6 +5,8 @@ This project need the Vivado IDE from Xilinx to build the Source Code as it make
 
 Some features include:
 
-- Makes use of the [Arlet Ottens FPGA implementation of the 6502], (https://github.com/Arlet/verilog-6502) which specifically is designed to make use of Block RAMS found on FPGA's
+- Makes use of the [Arlet Ottens FPGA implementation of the 6502](https://github.com/Arlet/verilog-6502) which specifically is designed to make use of Block RAMS found on FPGA's
 - VGA output of VIC-II
 - *Planned*: Interaction with the C64 with a USB keyboard
+
+For a Tutorial on how this implementation is developed in a incremental way, please see my Blog Series: [c64onfpga.blogspot.com]
