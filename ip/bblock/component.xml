@@ -412,31 +412,31 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/ALU.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/ALU.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/burst_block.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/burst_block.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/cpu.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/cpu.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/fifo.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/fifo.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/rom.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/rom.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/sync_dual_port_ram.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/sync_dual_port_ram.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/vicii_3.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/vicii_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -448,31 +448,31 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/ALU.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/ALU.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/burst_block.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/burst_block.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/cpu.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/cpu.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/fifo.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/fifo.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/rom.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/rom.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/sync_dual_port_ram.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/sync_dual_port_ram.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>/home/johan/trsrc/vicii_3.v</spirit:name>
+        <spirit:name>bblock.srcs/sources_1/new/vicii_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
