@@ -45,6 +45,13 @@ This will create all the project files.
 
 You can then proceed to Synthesise, create bitstream and launch Xilinx SDK.
 
+### AXI Block Quirks
+Running the TCL script will not give you a perfect implementation running out of the box.
+
+You will find when running this implementation of of the box, reading from SDRAM will not work at all, giving you a blank VGA screen.
+
+To fix this, you will need to manually ra-add the helper AXI blocks. The sections to fo
+
 ## Modules
 The C64 FPGA consists out of a couple of key modules. In this section I list them and give a brief description of each. All these modules is located withinthe IP folder.
 
