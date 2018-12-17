@@ -39,15 +39,87 @@ void scheduleTimer(int usec) {
 }
 
 u32 mapUsbToC64(int usbCode) {
-	if (usbCode == 0x4) {
+	if (usbCode == 0x4) { //A
 		return 0xa;
-	} else if (usbCode == 0x5) {
+	} else if (usbCode == 0x5) { //B
 		return 0x1c;
-	} else if (usbCode == 0x6) {
+	} else if (usbCode == 0x6) { //C
 		return 0x14;
-	} else if (usbCode == 0x7) {
+	} else if (usbCode == 0x7) { //D
 		return 0x12;
+	} else if (usbCode == 0x8) { //E
+		return 0xe;
+	} else if (usbCode == 0x9) { //F
+		return 0x15;
+	} else if (usbCode == 0xa) { //G
+		return 0x1a;
+	} else if (usbCode == 0xb) { //H
+		return 0x1d;
+	} else if (usbCode == 0xc) { //I
+		return 0x21;
+	} else if (usbCode == 0xd) { //J
+		return 0x22;
+	} else if (usbCode == 0xe) { //K
+		return 0x25;
+	} else if (usbCode == 0xf) { //L
+		return 0x2a;
+	} else if (usbCode == 0x10) { //M
+		return 0x24;
+	} else if (usbCode == 0x11) { //N
+		return 0x27;
+	} else if (usbCode == 0x12) { //O
+		return 0x26;
+	} else if (usbCode == 0x13) { //P
+		return 0x29;
+	} else if (usbCode == 0x14) { //Q
+		return 0x3e;
+	} else if (usbCode == 0x15) { //R
+		return 0x11;
+	} else if (usbCode == 0x16) { //S
+		return 0xd;
+	} else if (usbCode == 0x17) { //T
+		return 0x16;
+	} else if (usbCode == 0x18) { //U
+		return 0x1e;
+	} else if (usbCode == 0x19) { //V
+		return 0x1f;
+	} else if (usbCode == 0x1a) { //W
+		return 0x9;
+	} else if (usbCode == 0x1b) { //X
+		return 0x17;
+	} else if (usbCode == 0x1c) { //Y
+		return 0x19;
+	} else if (usbCode == 0x1d) { //Z
+		return 0xc;
+	} else if (usbCode == 0x27) { //zer0
+		return 0x23;
+	} else if (usbCode == 0x1e) { //1
+		return 0x38;
+	} else if (usbCode == 0x1f) { //2
+		return 0x3b;
+	} else if (usbCode == 0x20) { //3
+		return 0x8;
+	} else if (usbCode == 0x21) { //4
+		return 0xb;
+	} else if (usbCode == 0x22) { //5
+		return 0x10;
+	} else if (usbCode == 0x23) { //6
+		return 0x13;
+	} else if (usbCode == 0x24) { //7
+		return 0x18;
+	} else if (usbCode == 0x25) { //8
+		return 0x1b;
+	} else if (usbCode == 0x26) { //9
+		return 0x20;
+	} else if (usbCode == 0x7) { //shift NB!! modifier
+		return 0x12;
+	} else if (usbCode == 0x28) { //enter
+		return 0x1;
+	} else if (usbCode == 0x2c) { //space
+		return 0x3c;
 	}
+
+
 }
 
 u32 calNextPointer(u32 currentpointer) {
@@ -285,12 +357,22 @@ void state_machine() {
   if (!(Xil_In32(qTDAddressCheck + 8) & 0x80)) {
    u32 word0 = Xil_In32(0x305000);
    u32 word1 = Xil_In32(0x305004);
-   if (word0 == 0)
+   if (word0 == 0) {
 	   Xil_Out32(0x43c00000, 0);
-   else {
+	   Xil_Out32(0x43c00004, 0);
+   } else {
 	   u32 bit = mapUsbToC64((word0 >> 16) & 0xff);
-	   bit = 1 << bit;
-	   Xil_Out32(0x43c00000, bit);
+	   //bit = 1 << bit;
+	   u32 c64Word0 = 0;
+	   u32 c64Word1 = 0;
+	   if (bit < 32) {
+		   c64Word0 = 1 << bit;
+	   } else {
+		   c64Word1 = 1 << (bit - 32);
+	   }
+
+	   Xil_Out32(0x43c00000, c64Word0);
+	   Xil_Out32(0x43c00004, c64Word1);
    }
    printf("%x %x\n",word0, word1);
    struct QStruct *qh;
