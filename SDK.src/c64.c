@@ -111,14 +111,56 @@ u32 mapUsbToC64(int usbCode) {
 		return 0x1b;
 	} else if (usbCode == 0x26) { //9
 		return 0x20;
-	} else if (usbCode == 0x7) { //shift NB!! modifier
+	} /*else if (usbCode == 0x7) { //shift NB!! modifier
 		return 0x12;
-	} else if (usbCode == 0x28) { //enter
+	} */else if (usbCode == 0x28) { //enter
 		return 0x1;
 	} else if (usbCode == 0x2c) { //space
 		return 0x3c;
 	}
 
+
+}
+
+void getC64Words(u32 usbWord0, u32 usbWord1, u32 *c64Word0, u32 *c64Word1) {
+  *c64Word0 = 0;
+  *c64Word1 = 0;
+
+  if (usbWord0 & 2) {
+	  *c64Word0 = 0x8000;
+  }
+
+  usbWord0 = usbWord0 >> 16;
+
+  for (int i = 0; i < 2; i++) {
+	  int current = usbWord0 & 0xff;
+	  if (current != 0) {
+	    int scanCode = mapUsbToC64(current);
+        if (scanCode < 32) {
+		   *c64Word0 = *c64Word0 | (1 << scanCode);
+	    } else {
+		   *c64Word1 = *c64Word1 | (1 << (scanCode - 32));
+	    }
+
+	  }
+
+	  usbWord0 = usbWord0 >> 8;
+  }
+
+  for (int i = 0; i < 4; i++) {
+	  int current = usbWord1 & 0xff;
+	  if (current != 0) {
+	    int scanCode = mapUsbToC64(current);
+        if (scanCode < 32) {
+		   *c64Word0 = *c64Word0 | (1 << scanCode);
+	    } else {
+		   *c64Word1 = *c64Word1 | (1 << (scanCode - 32));
+	    }
+
+	  }
+
+	  usbWord1 = usbWord1 >> 8;
+  }
 
 }
 
@@ -361,15 +403,16 @@ void state_machine() {
 	   Xil_Out32(0x43c00000, 0);
 	   Xil_Out32(0x43c00004, 0);
    } else {
-	   u32 bit = mapUsbToC64((word0 >> 16) & 0xff);
+	   //u32 bit = mapUsbToC64((word0 >> 16) & 0xff);
 	   //bit = 1 << bit;
 	   u32 c64Word0 = 0;
 	   u32 c64Word1 = 0;
-	   if (bit < 32) {
+	   getC64Words(word0, word1, &c64Word0, &c64Word1);
+	   /*if (bit < 32) {
 		   c64Word0 = 1 << bit;
 	   } else {
 		   c64Word1 = 1 << (bit - 32);
-	   }
+	   }*/
 
 	   Xil_Out32(0x43c00000, c64Word0);
 	   Xil_Out32(0x43c00004, c64Word1);
