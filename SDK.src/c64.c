@@ -38,6 +38,18 @@ void scheduleTimer(int usec) {
  Xil_Out32(0xE0002084, 0x80000000);
 }
 
+u32 mapUsbToC64(int usbCode) {
+	if (usbCode == 0x4) {
+		return 0xa;
+	} else if (usbCode == 0x5) {
+		return 0x1c;
+	} else if (usbCode == 0x6) {
+		return 0x14;
+	} else if (usbCode == 0x7) {
+		return 0x12;
+	}
+}
+
 u32 calNextPointer(u32 currentpointer) {
  currentpointer = currentpointer - 0x300040;
  currentpointer = currentpointer + 0x20;
@@ -273,6 +285,13 @@ void state_machine() {
   if (!(Xil_In32(qTDAddressCheck + 8) & 0x80)) {
    u32 word0 = Xil_In32(0x305000);
    u32 word1 = Xil_In32(0x305004);
+   if (word0 == 0)
+	   Xil_Out32(0x43c00000, 0);
+   else {
+	   u32 bit = mapUsbToC64((word0 >> 16) & 0xff);
+	   bit = 1 << bit;
+	   Xil_Out32(0x43c00000, bit);
+   }
    printf("%x %x\n",word0, word1);
    struct QStruct *qh;
    qh = 0x304040;
