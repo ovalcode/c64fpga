@@ -34,6 +34,13 @@
         output wire [5:0] ip2bus_otputs,
         output wire [31:0] slave_reg_0,
         output wire [31:0] slave_reg_1,
+        output wire restart,
+        output wire c64_mode,
+        output wire tape_button,
+        input wire pwm,
+        output wire [4:0] joybits,
+        output wire [4:0] joybits2,
+
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -155,8 +162,13 @@
 		.S_AXI_RREADY(s00_axi_rready),
 		
 		.slave_reg_0(slave_reg_0),
-        .slave_reg_1(slave_reg_1)
-
+        .slave_reg_1(slave_reg_1),
+        .restart(restart),
+        .tape_button(tape_button),
+        .c64_mode(c64_mode),
+        .pwm(pwm),
+        .joybits(joybits),
+        .joybits2(joybits2)
 	);
 
 // Instantiation of Axi Bus Interface M00_AXI

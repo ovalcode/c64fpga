@@ -17,6 +17,13 @@
 		// Users to add ports here
         output wire [31:0] slave_reg_0,
         output wire [31:0] slave_reg_1,
+        output wire restart,
+        output wire tape_button,
+        input wire pwm,
+        output wire c64_mode,
+        output wire [4:0] joybits,
+        output wire [4:0] joybits2,
+
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -373,7 +380,7 @@
 	      case ( axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] )
 	        2'h0   : reg_data_out <= slv_reg0;
 	        2'h1   : reg_data_out <= slv_reg1;
-	        2'h2   : reg_data_out <= slv_reg2;
+	        2'h2   : reg_data_out <= {slv_reg2[31:1],pwm};
 	        2'h3   : reg_data_out <= slv_reg3;
 	        default : reg_data_out <= 0;
 	      endcase
@@ -401,6 +408,11 @@
 	// Add user logic here
     assign slave_reg_0 = slv_reg0;
     assign slave_reg_1 = slv_reg1;
+    assign restart = slv_reg2[1];
+    assign tape_button = slv_reg2[2];
+    assign joybits = slv_reg2[8:4];
+    assign c64_mode = slv_reg2[9];
+    assign joybits2 = slv_reg2[14:10];
 
 	// User logic ends
 

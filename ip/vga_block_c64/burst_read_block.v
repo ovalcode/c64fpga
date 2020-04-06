@@ -36,7 +36,8 @@ module burst_read_block(
   output wire [4:0] ip2bus_inputs,
   input wire [5:0] ip2bus_otputs,
   output wire empty,
-  input wire read
+  input wire read,
+  input wire [31:0] start_address
     );
     
 /*
@@ -195,7 +196,7 @@ if (!reset | (restart))
 begin
   //fiddle
   //TODO: this block should also be called upon flush
-  axi_start_address <= 32'h200000;
+  axi_start_address <= start_address;
   axi_data_inc <= 0;
 end
 else if (state == INIT_CMD)

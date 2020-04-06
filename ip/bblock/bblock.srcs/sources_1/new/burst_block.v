@@ -173,7 +173,7 @@ if (!reset | (next_frame & count_in_buf == 0))
 begin
   //fiddle
   //TODO: this block should also be called upon flush
-  axi_start_address <= 32'h200000;
+  axi_start_address <= /*32'h200000*/32'h1f700000;
   axi_data_inc <= 0;
 end
 else if (state == INIT_CMD)
