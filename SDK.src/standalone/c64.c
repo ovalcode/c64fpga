@@ -117,14 +117,29 @@ u32 mapUsbToC64(int usbCode) {
 		return 0x1;
 	} else if (usbCode == 0x2c) { //space
 		return 0x3c;
+	} else if (usbCode == 0x36) { //comma
+		return 0x2f;
+	} else if (usbCode == 53) { //play key `~
+		return 100;
+	} else if(usbCode == 96) { //up joystick
+		return 64;
+	} else if(usbCode == 90) { //down joystick
+		return 65;
+	} else if(usbCode == 92) { //left joystick
+		return 66;
+	} else if(usbCode == 94) { //right joystick
+		return 67;
+	} else if(usbCode == 98) { //fire joystick
+		return 68;
 	}
 
 
 }
 
-void getC64Words(u32 usbWord0, u32 usbWord1, u32 *c64Word0, u32 *c64Word1) {
+void getC64Words(u32 usbWord0, u32 usbWord1, u32 *c64Word0, u32 *c64Word1, u32 *c64Word2) {
   *c64Word0 = 0;
   *c64Word1 = 0;
+  *c64Word2 = 0;
 
   if (usbWord0 & 2) {
 	  *c64Word0 = 0x8000;
@@ -136,10 +151,14 @@ void getC64Words(u32 usbWord0, u32 usbWord1, u32 *c64Word0, u32 *c64Word1) {
 	  int current = usbWord0 & 0xff;
 	  if (current != 0) {
 	    int scanCode = mapUsbToC64(current);
-        if (scanCode < 32) {
+	    if (scanCode == 100) {
+	    	Xil_Out32(0x43C00008, 0);
+	    } else if (scanCode < 32) {
 		   *c64Word0 = *c64Word0 | (1 << scanCode);
-	    } else {
+	    } else if (scanCode < 64) {
 		   *c64Word1 = *c64Word1 | (1 << (scanCode - 32));
+	    } else {
+	       *c64Word2 = *c64Word2 | (1 << (scanCode - 64));
 	    }
 
 	  }
@@ -151,10 +170,14 @@ void getC64Words(u32 usbWord0, u32 usbWord1, u32 *c64Word0, u32 *c64Word1) {
 	  int current = usbWord1 & 0xff;
 	  if (current != 0) {
 	    int scanCode = mapUsbToC64(current);
-        if (scanCode < 32) {
+	    if (scanCode == 100) {
+	    	Xil_Out32(0x43C00008, 0);
+	    } else if (scanCode < 32) {
 		   *c64Word0 = *c64Word0 | (1 << scanCode);
-	    } else {
+	    } else if(scanCode < 64) {
 		   *c64Word1 = *c64Word1 | (1 << (scanCode - 32));
+	    } else {
+	    	*c64Word2 = *c64Word2 | (1 << (scanCode - 64));
 	    }
 
 	  }
@@ -353,6 +376,7 @@ void state_machine() {
    if (status == 0) {
     set_port_reset_state(1);
     scheduleTimer(12000);
+//    scheduleTimer(12000000);
     status = 1;
     return;
    } else if (status == 1) {
@@ -402,12 +426,17 @@ void state_machine() {
    if (word0 == 0) {
 	   Xil_Out32(0x43c00000, 0);
 	   Xil_Out32(0x43c00004, 0);
+	   u32 joy = Xil_In32(0x43c00008) | 0x1f0;
+	   Xil_Out32(0x43c00008, joy);
    } else {
 	   //u32 bit = mapUsbToC64((word0 >> 16) & 0xff);
 	   //bit = 1 << bit;
 	   u32 c64Word0 = 0;
 	   u32 c64Word1 = 0;
-	   getC64Words(word0, word1, &c64Word0, &c64Word1);
+	   u32 c64Word2 = 0;
+	   getC64Words(word0, word1, &c64Word0, &c64Word1, &c64Word2);
+	   c64Word2 = ~c64Word2 & 0x1f;
+	   c64Word2 = c64Word2 << 4;
 	   /*if (bit < 32) {
 		   c64Word0 = 1 << bit;
 	   } else {
@@ -416,6 +445,9 @@ void state_machine() {
 
 	   Xil_Out32(0x43c00000, c64Word0);
 	   Xil_Out32(0x43c00004, c64Word1);
+	   u32 tempJoy = (Xil_In32(0x43c00008) & 0xf) | c64Word2;
+	   Xil_Out32(0x43c00008, tempJoy);
+	   //Xil_In32(0x305004);
    }
    printf("%x %x\n",word0, word1);
    struct QStruct *qh;
@@ -450,15 +482,149 @@ void state_machine() {
 
 
 }
+
+void writeReg(int addr, int data) {
+	//master -> ACK -> CLR FIFO -> hold bus
+	    u32 in2 = Xil_In32(0xE0005000) | 64 | 16;
+	    in2 = in2 & ~1;
+	    Xil_Out32(0xE0005000, in2);
+	    //write data to register
+	        Xil_Out32(0xE000500c, (addr << 1) | ((data & 256) ? 1 : 0));
+	        Xil_Out32(0xE000500c, data & 255);
+	    //write address
+	        Xil_Out32(0xE0005008, 26);
+	    // Wait for completion
+	        u32 status = Xil_In32(0xe0005010) & 1;
+	        do {
+	        	status = Xil_In32(0xe0005010) & 1;
+	        } while (!status);
+
+	        //clear interrupts
+
+//	        Xil_Out32(0xe0005014, 2);
+
+	        Xil_Out32(0xe0005010, 1);
+
+	        in2 = Xil_In32(0xe0005000) & (~16);
+	        Xil_Out32(0xe0005000, in2);
+       return;
+}
+
+int readReg(int addr) {
+	//master -> ACK -> CLR FIFO -> hold bus
+
+
+	    u32 in2 = Xil_In32(0xE0005000) | 64 | 16;
+	    in2 = in2 & ~1;
+	    Xil_Out32(0xE0005000, in2);
+	    //write data to register
+	        Xil_Out32(0xE000500c, addr << 1);
+	    //write address
+	        Xil_Out32(0xE0005008, 26);
+	    // Wait for completion
+	        u32 status = Xil_In32(0xe0005010) & 1;
+	        do {
+	        	status = Xil_In32(0xe0005010) & 1;
+	        } while (!status);
+
+	        //clear interrupts
+
+//	        Xil_Out32(0xe0005014, 2);
+
+	        Xil_Out32(0xe0005010, 1);
+
+	        //set hold bus -> read -> clear fifo
+	        in2 = Xil_In32(0xe0005000) | 16 | 1 | 64;
+	        Xil_Out32(0xe0005000, in2);
+	        //set transfer size
+	        Xil_Out32(0xe0005014, 2);
+	        //set address
+	        Xil_Out32(0xe0005008, 26);
+	        //clear hold
+	        in2 = Xil_In32(0xe0005000) & (~16);
+	        Xil_Out32(0xe0005000, in2);
+	        //wait for completion
+	        do {
+	        	status = Xil_In32(0xe0005010) & 1;
+	        } while (!status);
+	        Xil_Out32(0xe0005010, 1);
+//	        in2 = Xil_In32(0xe000500c);
+	        u32 byte0 = Xil_In32(0xe000500c);
+	        u32 byte1 = Xil_In32(0xe000500c);
+	        return byte0 | (byte1 << 8);
+
+}
+
+void init_sound() {
+    Xil_Out32(0xe000501c, 0x1f);
+//Set divider + addressing mode
+    Xil_Out32(0xE0005000, 0x9004);
+//master -> ACK -> CLR FIFO -> hold bus
+    Xil_Out32(0xE0005000, 0x9004 + 2 + 8/* + 64 + 16*/);
+
+    /*int val = readReg(1);
+    val = val & ~63;
+    writeReg(1, val);
+    int val2 = readReg(1);*/
+
+    //enable power for dac + Out
+    //int val = readReg(6) & (~16) & (~8) & (~128);
+    int val = 0;
+    writeReg(15,0);
+    usleep(1000);
+    writeReg(6, 16 + 32 + 64);
+    writeReg(2, 0b101111001);
+    writeReg(3, 0b101111001);
+    writeReg(4, 0);
+    writeReg(5, 0);
+    writeReg(7, 1);
+    writeReg(8, 0);
+    usleep(1000);
+    writeReg(9, 1);
+    usleep(1000);
+    writeReg(6, 32);
+    usleep(1000);
+    writeReg(4,16+6);
+    //usleep (1000000);
+
+    //writeReg(9 , 1);
+
+    //set dacsel
+//    val = readReg(4) | 16;
+//    writeReg(4, val);
+
+//    val = readReg(5) & ~8;
+//    writeReg(5, val);
+
+
+    //left justified 16 bits
+//    val = (readReg(7) & (~12) & (~2) ) | 1;
+//    writeReg(7, val);
+
+//    val = (readReg(8) & ~(15 << 2)) | (2 << 2);
+//    writeReg(8, val);
+
+//    usleep (1000000);
+
+//    writeReg(9 , 1);
+//    writeReg(6,32 + 64);
+
+}
+
+
 int main()
 {
     Xil_DCacheDisable();
     init_platform();
+    init_sound();
+    Xil_Out32(0x43c00008, 0x1f4);
     initint();
     initUsb();
     status = 0;
     state_machine();
-    usleep(100000000);
+    asm("loop: wfi");
+    asm("b loop");
+//    usleep(1800000000);
     cleanup_platform();
     return 0;
 }
