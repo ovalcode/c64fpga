@@ -1,3 +1,14 @@
+##Audio Codec/external EEPROM IIC bus
+set_property -dict {PACKAGE_PIN N18 IOSTANDARD LVCMOS33} [get_ports ac_scl]
+set_property -dict {PACKAGE_PIN N17 IOSTANDARD LVCMOS33} [get_ports ac_sda]
+
+set_property -dict {PACKAGE_PIN K18 IOSTANDARD LVCMOS33} [get_ports ac_bclk]
+set_property -dict {PACKAGE_PIN T19 IOSTANDARD LVCMOS33} [get_ports ac_mclk]
+set_property -dict {PACKAGE_PIN P18 IOSTANDARD LVCMOS33} [get_ports ac_muten]
+set_property -dict {PACKAGE_PIN M17 IOSTANDARD LVCMOS33} [get_ports ac_pbdat]
+set_property -dict {PACKAGE_PIN L17 IOSTANDARD LVCMOS33} [get_ports ac_pblrc]
+#set_property -dict {PACKAGE_PIN K17 IOSTANDARD LVCMOS33} [get_ports ac_recdat]
+set_property -dict {PACKAGE_PIN M18 IOSTANDARD LVCMOS33} [get_ports ac_reclrc]
 
 
 #VGA Connector

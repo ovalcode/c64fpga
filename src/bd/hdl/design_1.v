@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
-//Date        : Mon Apr  6 16:41:19 2020
+//Date        : Fri Apr 17 18:05:55 2020
 //Host        : johan-Latitude-E5550 running 64-bit Ubuntu 16.04.5 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=12,numNonXlnxBlks=6,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=16,numNonXlnxBlks=10,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_0_addr,
     DDR_0_ba,
@@ -32,6 +32,14 @@ module design_1
     FIXED_IO_0_ps_clk,
     FIXED_IO_0_ps_porb,
     FIXED_IO_0_ps_srstb,
+    ac_bclk,
+    ac_mclk,
+    ac_muten,
+    ac_pbdat,
+    ac_pblrc,
+    ac_reclrc,
+    ac_scl,
+    ac_sda,
     vga_b,
     vga_g,
     vga_hs,
@@ -58,12 +66,23 @@ module design_1
   inout FIXED_IO_0_ps_clk;
   inout FIXED_IO_0_ps_porb;
   inout FIXED_IO_0_ps_srstb;
+  output ac_bclk;
+  output ac_mclk;
+  output ac_muten;
+  output ac_pbdat;
+  output ac_pblrc;
+  output ac_reclrc;
+  inout ac_scl;
+  inout ac_sda;
   output [4:0]vga_b;
   output [5:0]vga_g;
   output vga_hs;
   output [4:0]vga_r;
   output vga_vs;
 
+  wire Net;
+  wire Net1;
+  wire Net2;
   wire [31:0]axi_smc_M00_AXI_ARADDR;
   wire [1:0]axi_smc_M00_AXI_ARBURST;
   wire [3:0]axi_smc_M00_AXI_ARCACHE;
@@ -130,6 +149,7 @@ module design_1
   wire axi_smc_M01_AXI_WREADY;
   wire [3:0]axi_smc_M01_AXI_WSTRB;
   wire axi_smc_M01_AXI_WVALID;
+  wire [15:0]block_test_0_audio_out;
   wire block_test_0_clk_1_mhz;
   wire [4:0]block_test_0_ip2bus_inputs;
   wire [31:0]block_test_0_ip2bus_mst_addr;
@@ -139,6 +159,12 @@ module design_1
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_locked;
   wire clk_wiz_1_clk_out1;
+  wire i2s_0_channel_enable;
+  wire i2s_0_clk_1_5_mhz;
+  wire i2s_0_mute_en;
+  wire i2s_0_out_data;
+  wire iobuf_0_out;
+  wire iobuf_1_out;
   wire [31:0]myip_burst_read_test_0_M00_AXI_ARADDR;
   wire [1:0]myip_burst_read_test_0_M00_AXI_ARBURST;
   wire [3:0]myip_burst_read_test_0_M00_AXI_ARCACHE;
@@ -271,6 +297,7 @@ module design_1
   wire [31:0]myip_burst_test_0_slave_reg_0;
   wire [31:0]myip_burst_test_0_slave_reg_1;
   wire myip_burst_test_0_tape_button;
+  wire oddr_buf_0_Mlck_O;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -294,6 +321,10 @@ module design_1
   wire processing_system7_0_FIXED_IO_PS_CLK;
   wire processing_system7_0_FIXED_IO_PS_PORB;
   wire processing_system7_0_FIXED_IO_PS_SRSTB;
+  wire processing_system7_0_I2C1_SCL_O;
+  wire processing_system7_0_I2C1_SCL_T;
+  wire processing_system7_0_I2C1_SDA_O;
+  wire processing_system7_0_I2C1_SDA_T;
   wire [31:0]processing_system7_0_M_AXI_GP0_ARADDR;
   wire [1:0]processing_system7_0_M_AXI_GP0_ARBURST;
   wire [3:0]processing_system7_0_M_AXI_GP0_ARCACHE;
@@ -367,6 +398,12 @@ module design_1
   wire [4:0]vga_tst_c64_0_red;
   wire vga_tst_c64_0_vert_sync;
 
+  assign ac_bclk = i2s_0_clk_1_5_mhz;
+  assign ac_mclk = oddr_buf_0_Mlck_O;
+  assign ac_muten = i2s_0_mute_en;
+  assign ac_pbdat = i2s_0_out_data;
+  assign ac_pblrc = i2s_0_channel_enable;
+  assign ac_reclrc = i2s_0_channel_enable;
   assign vga_b[4:0] = vga_tst_c64_0_blue;
   assign vga_g[5:0] = vga_tst_c64_0_green;
   assign vga_hs = vga_tst_c64_0_horiz_sync;
@@ -564,7 +601,8 @@ module design_1
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   design_1_block_test_0_0 block_test_0
-       (.axi_clk_in(processing_system7_0_FCLK_CLK0),
+       (.audio_out(block_test_0_audio_out),
+        .axi_clk_in(processing_system7_0_FCLK_CLK0),
         .clk(clk_wiz_0_clk_out1),
         .clk_1_mhz(block_test_0_clk_1_mhz),
         .flag1(tape_interface_0_pwm),
@@ -586,12 +624,32 @@ module design_1
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(processing_system7_0_FCLK_CLK0),
         .clk_out1(clk_wiz_0_clk_out1),
+        .clk_out2(Net),
         .locked(clk_wiz_0_locked),
         .reset(rst_ps7_0_100M_peripheral_reset));
   design_1_clk_wiz_1_1 clk_wiz_1
        (.clk_in1(processing_system7_0_FCLK_CLK0),
         .clk_out1(clk_wiz_1_clk_out1),
         .reset(rst_ps7_0_100M_peripheral_reset));
+  design_1_i2s_0_0 i2s_0
+       (.audio_in(block_test_0_audio_out),
+        .channel_enable(i2s_0_channel_enable),
+        .clk(Net),
+        .clk_100_mhz(1'b0),
+        .clk_1_5_mhz(i2s_0_clk_1_5_mhz),
+        .clk_1_mhz(block_test_0_clk_1_mhz),
+        .mute_en(i2s_0_mute_en),
+        .out_data(i2s_0_out_data));
+  design_1_iobuf_0_0 iobuf_0
+       (.in(processing_system7_0_I2C1_SDA_O),
+        .out(iobuf_0_out),
+        .pin(ac_sda),
+        .tristate(processing_system7_0_I2C1_SDA_T));
+  design_1_iobuf_1_0 iobuf_1
+       (.in(processing_system7_0_I2C1_SCL_O),
+        .out(iobuf_1_out),
+        .pin(ac_scl),
+        .tristate(processing_system7_0_I2C1_SCL_T));
   design_1_myip_burst_read_test_0_1 myip_burst_read_test_0
        (.bus2ip_mstrd_d(myip_burst_read_test_0_bus2ip_mstrd_d),
         .ip2bus_inputs(vga_tst_c64_0_ip2bus_inputs),
@@ -771,6 +829,9 @@ module design_1
         .slave_reg_0(myip_burst_test_0_slave_reg_0),
         .slave_reg_1(myip_burst_test_0_slave_reg_1),
         .tape_button(myip_burst_test_0_tape_button));
+  design_1_oddr_buf_0_0 oddr_buf_0
+       (.Mlck_O(oddr_buf_0_Mlck_O),
+        .clk_in(Net));
   design_1_processing_system7_0_2 processing_system7_0
        (.DDR_Addr(DDR_0_addr[14:0]),
         .DDR_BankAddr(DDR_0_ba[2:0]),
@@ -792,6 +853,12 @@ module design_1
         .ENET0_MDIO_I(1'b0),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
         .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
+        .I2C1_SCL_I(iobuf_1_out),
+        .I2C1_SCL_O(processing_system7_0_I2C1_SCL_O),
+        .I2C1_SCL_T(processing_system7_0_I2C1_SCL_T),
+        .I2C1_SDA_I(iobuf_0_out),
+        .I2C1_SDA_O(processing_system7_0_I2C1_SDA_O),
+        .I2C1_SDA_T(processing_system7_0_I2C1_SDA_T),
         .MIO(FIXED_IO_0_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
         .M_AXI_GP0_ARADDR(processing_system7_0_M_AXI_GP0_ARADDR),

@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
-//Date        : Mon Apr  6 16:41:20 2020
+//Date        : Fri Apr 17 18:05:56 2020
 //Host        : johan-Latitude-E5550 running 64-bit Ubuntu 16.04.5 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -31,6 +31,14 @@ module design_1_wrapper
     FIXED_IO_0_ps_clk,
     FIXED_IO_0_ps_porb,
     FIXED_IO_0_ps_srstb,
+    ac_bclk,
+    ac_mclk,
+    ac_muten,
+    ac_pbdat,
+    ac_pblrc,
+    ac_reclrc,
+    ac_scl,
+    ac_sda,
     vga_b,
     vga_g,
     vga_hs,
@@ -57,6 +65,14 @@ module design_1_wrapper
   inout FIXED_IO_0_ps_clk;
   inout FIXED_IO_0_ps_porb;
   inout FIXED_IO_0_ps_srstb;
+  output ac_bclk;
+  output ac_mclk;
+  output ac_muten;
+  output ac_pbdat;
+  output ac_pblrc;
+  output ac_reclrc;
+  inout ac_scl;
+  inout ac_sda;
   output [4:0]vga_b;
   output [5:0]vga_g;
   output vga_hs;
@@ -84,6 +100,14 @@ module design_1_wrapper
   wire FIXED_IO_0_ps_clk;
   wire FIXED_IO_0_ps_porb;
   wire FIXED_IO_0_ps_srstb;
+  wire ac_bclk;
+  wire ac_mclk;
+  wire ac_muten;
+  wire ac_pbdat;
+  wire ac_pblrc;
+  wire ac_reclrc;
+  wire ac_scl;
+  wire ac_sda;
   wire [4:0]vga_b;
   wire [5:0]vga_g;
   wire vga_hs;
@@ -112,6 +136,14 @@ module design_1_wrapper
         .FIXED_IO_0_ps_clk(FIXED_IO_0_ps_clk),
         .FIXED_IO_0_ps_porb(FIXED_IO_0_ps_porb),
         .FIXED_IO_0_ps_srstb(FIXED_IO_0_ps_srstb),
+        .ac_bclk(ac_bclk),
+        .ac_mclk(ac_mclk),
+        .ac_muten(ac_muten),
+        .ac_pbdat(ac_pbdat),
+        .ac_pblrc(ac_pblrc),
+        .ac_reclrc(ac_reclrc),
+        .ac_scl(ac_scl),
+        .ac_sda(ac_sda),
         .vga_b(vga_b),
         .vga_g(vga_g),
         .vga_hs(vga_hs),

@@ -107,7 +107,7 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 
 # Set IP repository paths
 set obj [get_filesets sources_1]
-set_property "ip_repo_paths" "[file normalize "$origin_dir/ip/vga_block_c64"] [file normalize "$origin_dir/ip/myip_burst_read_test_1.0"] [file normalize "$origin_dir/ip/bblock"] [file normalize "$origin_dir/ip/myip_burst_test_1.0"] [file normalize "$origin_dir/ip/tapefiles"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip/vga_block_c64"] [file normalize "$origin_dir/ip/myip_burst_read_test_1.0"] [file normalize "$origin_dir/ip/bblock"] [file normalize "$origin_dir/ip/myip_burst_test_1.0"] [file normalize "$origin_dir/ip/tapefiles"] [file normalize "$origin_dir/ip/iobuf2"] [file normalize "$origin_dir/ip/oddr2"] [file normalize "$origin_dir/ip/tempi2s"]" $obj
 
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
