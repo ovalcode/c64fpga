@@ -38,6 +38,9 @@ static void __iomem *c64_reg_keyboard_0;
 static void __iomem *c64_reg_keyboard_1;
 
 static void __iomem *tape_mem_area;
+static void __iomem *i2c_reg;
+static void __iomem *clk_reg;
+
 static unsigned int tape_pointer = 0;
 
 struct keyboard 
@@ -70,6 +73,140 @@ static struct file_operations fops =
    .release = dev_release,
 };
 
+void writeReg(int addr, int data) {
+	//master -> ACK -> CLR FIFO -> hold bus
+	    u32 in2 = ioread32(/*0xE0005000*/i2c_reg) | 64 | 16;
+	    in2 = in2 & ~1;
+	    iowrite32(in2, /*0xE0005000*/i2c_reg);
+	    //write data to register
+	        iowrite32((addr << 1) | ((data & 256) ? 1 : 0), /*0xE000500c*/i2c_reg +0xc);
+	        iowrite32(data & 255, /*0xE000500c*/i2c_reg+0xc);
+	    //write address
+	        iowrite32(26, /*0xE0005008*/i2c_reg+8);
+	    // Wait for completion
+	        u32 status = ioread32(/*0xe0005010*/i2c_reg+0x10) & 1;
+	        do {
+	        	status = ioread32(/*0xe0005010*/i2c_reg+0x10) & 1;
+	        } while (!status);
+
+	        //clear interrupts
+
+//	        Xil_Out32(0xe0005014, 2);
+
+	        iowrite32(1,/*0xe0005010*/i2c_reg+0x10);
+
+	        in2 = ioread32(/*0xe0005000*/i2c_reg) & (~16);
+	        iowrite32(in2,/*0xe0005000*/i2c_reg);
+       return;
+}
+
+int readReg(int addr) {
+	//master -> ACK -> CLR FIFO -> hold bus
+
+
+	    u32 in2 = ioread32(/*0xE0005000*/i2c_reg) | 64 | 16;
+	    in2 = in2 & ~1;
+	    iowrite32(in2, /*0xE0005000*/i2c_reg);
+	    //write data to register
+	        iowrite32(addr << 1, /*0xE000500c*/i2c_reg+0xc);
+	    //write address
+	        iowrite32(26, /*0xE0005008*/i2c_reg+8);
+	    // Wait for completion
+	        u32 status = ioread32(/*0xe0005010*/i2c_reg+0x10) & 1;
+	        do {
+	        	status = ioread32(/*0xe0005010*/i2c_reg+0x10) & 1;
+	        } while (!status);
+
+	        //clear interrupts
+
+//	        Xil_Out32(0xe0005014, 2);
+
+	        iowrite32(1, /*0xe0005010*/i2c_reg+0x10);
+
+	        //set hold bus -> read -> clear fifo
+	        in2 = ioread32(/*0xe0005000*/i2c_reg) | 16 | 1 | 64;
+	        iowrite32(in2, /*0xe0005000*/i2c_reg);
+	        //set transfer size
+	        iowrite32(2, /*0xe0005014*/i2c_reg+0x14);
+	        //set address
+	        iowrite32(26, /*0xe0005008*/i2c_reg+8);
+	        //clear hold
+	        in2 = ioread32(/*0xe0005000*/i2c_reg) & (~16);
+	        iowrite32(in2, /*0xe0005000*/i2c_reg);
+	        //wait for completion
+	        do {
+	        	status = ioread32(/*0xe0005010*/i2c_reg+0x10) & 1;
+	        } while (!status);
+	        iowrite32(1, /*0xe0005010*/i2c_reg+0x10);
+//	        in2 = Xil_In32(0xe000500c);
+	        u32 byte0 = ioread32(/*0xe000500c*/i2c_reg+0xc);
+	        u32 byte1 = ioread32(/*0xe000500c*/i2c_reg+0xc);
+	        return byte0 | (byte1 << 8);
+
+}
+
+void init_sound(void) {
+    printk("In print init sound\n");
+    iowrite32(0x1f, /*0xe000501c*/i2c_reg+0x1c);
+    printk("After print sound\n");
+//Set divider + addressing mode
+    iowrite32(0x9004, /*0xE0005000*/i2c_reg);
+//master -> ACK -> CLR FIFO -> hold bus
+    iowrite32( 0x9004 + 2 + 8/* + 64 + 16*/, /*0xE0005000*/i2c_reg);
+
+    /*int val = readReg(1);
+    val = val & ~63;
+    writeReg(1, val);
+    int val2 = readReg(1);*/
+
+    //enable power for dac + Out
+    //int val = readReg(6) & (~16) & (~8) & (~128);
+    int val = 0;
+    printk("before first write \n");
+    writeReg(15,0);
+    printk("after first write \n");
+    msleep(1);
+    printk("before second write \n");
+    writeReg(6, 16 + 32 + 64);
+    printk("after second write \n");
+    writeReg(2, 0b101111001);
+    writeReg(3, 0b101111001);
+    writeReg(4, 0);
+    writeReg(5, 0);
+    writeReg(7, 1);
+    writeReg(8, 0);
+    msleep(1);
+    writeReg(9, 1);
+    msleep(1);
+    writeReg(6, 32);
+    msleep(1);
+    writeReg(4,16+6);
+    //usleep (1000000);
+
+    //writeReg(9 , 1);
+
+    //set dacsel
+//    val = readReg(4) | 16;
+//    writeReg(4, val);
+
+//    val = readReg(5) & ~8;
+//    writeReg(5, val);
+
+
+    //left justified 16 bits
+//    val = (readReg(7) & (~12) & (~2) ) | 1;
+//    writeReg(7, val);
+
+//    val = (readReg(8) & ~(15 << 2)) | (2 << 2);
+//    writeReg(8, val);
+
+//    usleep (1000000);
+
+//    writeReg(9 , 1);
+//    writeReg(6,32 + 64);
+
+}
+
 /** @brief The LKM initialization function
  *  The static keyword restricts the visibility of the function to within this C file. The __init
  *  macro means that for a built-in driver (not a LKM) the function is only used at initialization
@@ -94,6 +231,11 @@ c64_reg_keyboard_1 = c64_reg + 4;
 tape_mem_area =  ioremap(0x1f500000,
 				       2000000);
 
+i2c_reg = ioremap(0xE0005000, 128);
+clk_reg = ioremap(0xF8000000, 0x200); //01EC044D mrd 0xF800012C
+iowrite32(0x01EC044D, clk_reg+0x12c);
+msleep(2);
+init_sound();
 //c64_reg = c64_reg + 8;
    printk(KERN_INFO "EBBChar: registered correctly with major number %d\n", majorNumber);
 

@@ -211,7 +211,7 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>ac_bclk</spirit:name>
+          <spirit:name>ac_muten</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
@@ -223,7 +223,7 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>ac_muten</spirit:name>
+          <spirit:name>ac_bclk</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
@@ -235,13 +235,13 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>ac_pblrc</spirit:name>
+          <spirit:name>ac_reclrc</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>ac_reclrc</spirit:name>
+          <spirit:name>ac_pblrc</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
