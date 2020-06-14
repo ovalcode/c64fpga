@@ -60,6 +60,12 @@ ENET0_MDIO_MDC,
 ENET0_MDIO_O, 
 ENET0_MDIO_T, 
 ENET0_MDIO_I, 
+I2C1_SDA_I, 
+I2C1_SDA_O, 
+I2C1_SDA_T, 
+I2C1_SCL_I, 
+I2C1_SCL_O, 
+I2C1_SCL_T, 
 SDIO0_WP, 
 TTC0_WAVE0_OUT, 
 TTC0_WAVE1_OUT, 
@@ -212,6 +218,12 @@ output ENET0_MDIO_MDC;
 output ENET0_MDIO_O;
 output ENET0_MDIO_T;
 input ENET0_MDIO_I;
+input I2C1_SDA_I;
+output I2C1_SDA_O;
+output I2C1_SDA_T;
+input I2C1_SCL_I;
+output I2C1_SCL_O;
+output I2C1_SCL_T;
 input SDIO0_WP;
 output TTC0_WAVE0_OUT;
 output TTC0_WAVE1_OUT;
@@ -360,7 +372,7 @@ input PS_SRSTB;
 input PS_CLK;
 input PS_PORB;
 
-  processing_system7_vip_v1_0_0 #(
+  processing_system7_vip_v1_0_7 #(
     .C_USE_M_AXI_GP0(1),
     .C_USE_M_AXI_GP1(0),
     .C_USE_S_AXI_ACP(0),

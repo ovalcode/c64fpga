@@ -50,7 +50,7 @@
 // IP VLNV: user.org:user:block_test:1.0
 // IP Revision: 106
 
-(* X_CORE_INFO = "block_test,Vivado 2017.1" *)
+(* X_CORE_INFO = "block_test,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_block_test_0_0,block_test,{}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_block_test_0_0 (
@@ -97,6 +97,7 @@ module design_1_block_test_0_0 (
   audio_out
 );
 
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET proc_rst:reset_cpu, FREQ_HZ 8000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire axi_clk_in;
@@ -115,8 +116,10 @@ output wire flag1_debug;
 output wire flag1_delayed_debug;
 output wire irq_debug;
 output wire addr_debug;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME proc_rst, POLARITY ACTIVE_LOW" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 proc_rst RST" *)
 input wire proc_rst;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset_cpu, POLARITY ACTIVE_LOW" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset_cpu RST" *)
 input wire reset_cpu;
 input wire locked;

@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:myip_burst_test:1.0
--- IP Revision: 17
+-- IP Revision: 18
 
 -- The following code must appear in the VHDL architecture header.
 

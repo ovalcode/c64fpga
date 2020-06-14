@@ -94,9 +94,11 @@ module design_1_vga_tst_c64_0_1 (
   vert_sync_delayed_5_debug
 );
 
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 85400000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire clk_axi;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
 input wire reset;
 output wire vert_sync;

@@ -1,1390 +1,2609 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x3C213F2A17473D92" bd:device="xc7z010clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.1" bd:top="design_1" bd:version="1.00.a">
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram</spirit:library>
-    <spirit:name>design_1</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:parameters>
-      <spirit:parameter>
-        <spirit:name>isTop</spirit:name>
-        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
-      </spirit:parameter>
-    </spirit:parameters>
-    <spirit:busInterfaces>
-      <spirit:busInterface>
-        <spirit:name>DDR_0</spirit:name>
-        <spirit:master/>
-        <spirit:busType spirit:library="interface" spirit:name="ddrx" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="ddrx_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>CAN_DEBUG</spirit:name>
-            <spirit:value>false</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>TIMEPERIOD_PS</spirit:name>
-            <spirit:value>1250</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>MEMORY_TYPE</spirit:name>
-            <spirit:value>COMPONENTS</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>DATA_WIDTH</spirit:name>
-            <spirit:value>8</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>CS_ENABLED</spirit:name>
-            <spirit:value>true</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>DATA_MASK_ENABLED</spirit:name>
-            <spirit:value>true</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>SLOT</spirit:name>
-            <spirit:value>Single</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>MEM_ADDR_MAP</spirit:name>
-            <spirit:value>ROW_COLUMN_BANK</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>BURST_LENGTH</spirit:name>
-            <spirit:value>8</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>AXI_ARBITRATION_SCHEME</spirit:name>
-            <spirit:value>TDM</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>CAS_LATENCY</spirit:name>
-            <spirit:value>11</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>CAS_WRITE_LATENCY</spirit:name>
-            <spirit:value>11</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>FIXED_IO_0</spirit:name>
-        <spirit:master/>
-        <spirit:busType spirit:library="display_processing_system7" spirit:name="fixedio" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="display_processing_system7" spirit:name="fixedio_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>CAN_DEBUG</spirit:name>
-            <spirit:value>false</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-    </spirit:busInterfaces>
-    <spirit:model>
-      <spirit:views>
-        <spirit:view>
-          <spirit:name>BlockDiagram</spirit:name>
-          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
-          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="design_1_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-        </spirit:view>
-      </spirit:views>
-      <spirit:ports>
-        <spirit:port>
-          <spirit:name>vga_r</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>4</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>vga_g</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>5</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>vga_b</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>4</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>vga_vs</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>vga_hs</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>ac_sda</spirit:name>
-          <spirit:wire>
-            <spirit:direction>inout</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>ac_scl</spirit:name>
-          <spirit:wire>
-            <spirit:direction>inout</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>ac_muten</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>ac_mclk</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>ac_bclk</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>ac_pbdat</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>ac_reclrc</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>ac_pblrc</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-      </spirit:ports>
-    </spirit:model>
-  </spirit:component>
-
-  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram</spirit:library>
-    <spirit:name>design_1_imp</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:componentInstances>
-      <spirit:componentInstance>
-        <spirit:instanceName>clk_wiz_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="5.4"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_clk_wiz_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">8</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">12.288</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKFBOUT_MULT_F">7.250</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">90.625</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">59</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">242.812</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">119.384</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">223.282</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">119.384</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>myip_burst_read_test_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="myip_burst_read_test" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_myip_burst_read_test_0_1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>clk_wiz_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="5.4"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_clk_wiz_1_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">85.4</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">5</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKFBOUT_MULT_F">53.375</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">12.500</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">230.004</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">297.994</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>tape_interface_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="tape_interface" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_tape_interface_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>myip_burst_read_test_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="myip_burst_read_test" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_myip_burst_read_test_1_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>myip_burst_test_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="myip_burst_test" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_myip_burst_test_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>processing_system7_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="processing_system7" spirit:vendor="xilinx.com" spirit:version="5.5"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_processing_system7_0_2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_FREQ_MHZ">525</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0">-0.073</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1">-0.034</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2">-0.03</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3">-0.082</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_BOARD_DELAY0">0.176</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_BOARD_DELAY1">0.159</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_BOARD_DELAY2">0.162</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_BOARD_DELAY3">0.187</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_CRYSTAL_PERIPHERAL_FREQMHZ">50.000000</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_APU_PERIPHERAL_FREQMHZ">650</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_SDIO_PERIPHERAL_FREQMHZ">50</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_FPGA0_PERIPHERAL_FREQMHZ">100</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_USE_S_AXI_GP0">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_USE_S_AXI_GP1">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_PRESET_BANK1_VOLTAGE">LVCMOS 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_PARTNO">MT41K128M16 JT-125</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_TRAIN_WRITE_LEVEL">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_TRAIN_READ_GATE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_TRAIN_DATA_EYE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_QSPI_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_QSPI_GRP_SINGLE_SS_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_QSPI_GRP_FBCLK_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_ENET0_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_ENET0_ENET0_IO">MIO 16 .. 27</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_ENET0_GRP_MDIO_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_SD0_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_SD0_GRP_CD_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_SD0_GRP_CD_IO">MIO 47</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_SD0_GRP_WP_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UART1_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_TTC0_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_USB0_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_I2C1_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_GPIO_MIO_GPIO_ENABLE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_0_PULLUP">enabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_1_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_1_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_2_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_3_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_4_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_5_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_6_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_8_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_9_PULLUP">enabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_10_PULLUP">enabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_11_PULLUP">enabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_12_PULLUP">enabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_16_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_16_IOTYPE">HSTL 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_16_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_17_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_17_IOTYPE">HSTL 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_17_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_18_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_18_IOTYPE">HSTL 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_18_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_19_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_19_IOTYPE">HSTL 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_19_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_20_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_20_IOTYPE">HSTL 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_20_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_21_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_21_IOTYPE">HSTL 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_21_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_22_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_22_IOTYPE">HSTL 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_22_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_23_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_23_IOTYPE">HSTL 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_23_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_24_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_24_IOTYPE">HSTL 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_24_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_25_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_25_IOTYPE">HSTL 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_25_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_26_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_26_IOTYPE">HSTL 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_26_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_27_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_27_IOTYPE">HSTL 1.8V</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_27_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_28_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_28_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_29_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_29_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_30_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_30_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_31_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_31_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_32_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_32_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_33_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_33_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_34_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_34_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_35_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_35_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_36_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_36_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_37_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_37_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_38_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_38_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_39_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_39_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_40_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_40_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_41_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_41_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_42_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_42_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_43_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_43_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_44_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_44_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_45_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_45_SLEW">fast</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_47_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_48_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_49_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_50_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_51_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_52_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_52_SLEW">slow</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_53_PULLUP">disabled</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_MIO_53_SLEW">slow</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>axi_smc</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="smartconnect" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_axi_smc_2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="NUM_MI">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="NUM_SI">3</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>rst_ps7_0_100M</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_rst_ps7_0_100M_2</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>ps7_0_axi_periph</spirit:instanceName>
-        <spirit:componentRef spirit:library="BlockDiagram/design_1_imp" spirit:name="ps7_0_axi_periph" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_ps7_0_axi_periph_2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="NUM_MI">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="appcore">xilinx.com:ip:axi_interconnect:2.1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>block_test_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="block_test" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_block_test_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>vga_tst_c64_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="vga_tst_c64" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_vga_tst_c64_0_1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>i2s_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="i2s" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_i2s_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>iobuf_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="iobuf" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_iobuf_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>iobuf_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="iobuf" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_iobuf_1_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>oddr_buf_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="oddr_buf" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_oddr_buf_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-    </spirit:componentInstances>
-    <spirit:interconnections>
-      <spirit:interconnection>
-        <spirit:name>myip_burst_read_test_0_M00_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="myip_burst_read_test_0"/>
-        <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="axi_smc"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>axi_smc_M00_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="axi_smc"/>
-        <spirit:activeInterface spirit:busRef="S_AXI_GP0" spirit:componentRef="processing_system7_0"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>axi_smc_M01_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M01_AXI" spirit:componentRef="axi_smc"/>
-        <spirit:activeInterface spirit:busRef="S_AXI_GP1" spirit:componentRef="processing_system7_0"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>myip_burst_read_test_1_M00_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="myip_burst_read_test_1"/>
-        <spirit:activeInterface spirit:busRef="S01_AXI" spirit:componentRef="axi_smc"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>processing_system7_0_M_AXI_GP0</spirit:name>
-        <spirit:activeInterface spirit:busRef="M_AXI_GP0" spirit:componentRef="processing_system7_0"/>
-        <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="ps7_0_axi_periph"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>ps7_0_axi_periph_M00_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="ps7_0_axi_periph"/>
-        <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="myip_burst_test_0"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>myip_burst_test_0_M00_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="myip_burst_test_0"/>
-        <spirit:activeInterface spirit:busRef="S02_AXI" spirit:componentRef="axi_smc"/>
-      </spirit:interconnection>
-    </spirit:interconnections>
-    <spirit:adHocConnections>
-      <spirit:adHocConnection>
-        <spirit:name>processing_system7_0_FCLK_CLK0</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_CLK0"/>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_in1"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_0" spirit:portRef="m00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_1" spirit:portRef="clk_in1"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="s00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="m00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="tape_interface_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_smc" spirit:portRef="aclk"/>
-        <spirit:internalPortReference spirit:componentRef="rst_ps7_0_100M" spirit:portRef="slowest_sync_clk"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_GP0_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_GP1_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_1" spirit:portRef="m00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="M_AXI_GP0_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="axi_clk_in"/>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="clk_axi"/>
-        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="ACLK"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>rst_ps7_0_100M_peripheral_reset</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="rst_ps7_0_100M" spirit:portRef="peripheral_reset"/>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="reset"/>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_1" spirit:portRef="reset"/>
-        <spirit:internalPortReference spirit:componentRef="tape_interface_0" spirit:portRef="reset"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>clk_wiz_1_clk_out1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_1" spirit:portRef="clk_out1"/>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="clk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>myip_burst_read_test_0_bus2ip_mstrd_d</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_0" spirit:portRef="bus2ip_mstrd_d"/>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="ip2bus_mstrd_d"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>myip_burst_read_test_0_ip2bus_otputs</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_0" spirit:portRef="ip2bus_otputs"/>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="ip2bus_otputs"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>vga_tst_c64_0_ip2bus_mst_addr</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="ip2bus_mst_addr"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_0" spirit:portRef="ip2bus_mst_addr"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>vga_tst_c64_0_ip2bus_mst_length</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="ip2bus_mst_length"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_0" spirit:portRef="ip2bus_mst_length"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>vga_tst_c64_0_ip2bus_inputs</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="ip2bus_inputs"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_0" spirit:portRef="ip2bus_inputs"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>vga_tst_c64_0_red</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="red"/>
-        <spirit:externalPortReference spirit:portRef="vga_r"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>vga_tst_c64_0_green</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="green"/>
-        <spirit:externalPortReference spirit:portRef="vga_g"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>vga_tst_c64_0_blue</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="blue"/>
-        <spirit:externalPortReference spirit:portRef="vga_b"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>vga_tst_c64_0_vert_sync</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="vert_sync"/>
-        <spirit:externalPortReference spirit:portRef="vga_vs"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>vga_tst_c64_0_horiz_sync</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="horiz_sync"/>
-        <spirit:externalPortReference spirit:portRef="vga_hs"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>clk_wiz_0_clk_out1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="clk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>myip_burst_test_0_ip2bus_otputs</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="ip2bus_otputs"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="ip2bus_otputs"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>myip_burst_test_0_slave_reg_0</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="slave_reg_0"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="slave_0_reg"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>myip_burst_test_0_slave_reg_1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="slave_reg_1"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="slave_1_reg"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>block_test_0_ip2bus_mst_addr</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="ip2bus_mst_addr"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="ip2bus_mst_addr"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>block_test_0_ip2bus_mst_length</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="ip2bus_mst_length"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="ip2bus_mst_length"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>block_test_0_ip2bus_mstwr_d</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="ip2bus_mstwr_d"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="ip2bus_mstwr_d"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>block_test_0_ip2bus_inputs</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="ip2bus_inputs"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="ip2bus_inputs"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>block_test_0_clk_1_mhz</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="clk_1_mhz"/>
-        <spirit:internalPortReference spirit:componentRef="tape_interface_0" spirit:portRef="clk_1_mhz"/>
-        <spirit:internalPortReference spirit:componentRef="i2s_0" spirit:portRef="clk_1_mhz"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>myip_burst_test_0_restart</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="restart"/>
-        <spirit:internalPortReference spirit:componentRef="tape_interface_0" spirit:portRef="restart"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="reset_cpu"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>myip_burst_read_test_1_bus2ip_mstrd_d</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_1" spirit:portRef="bus2ip_mstrd_d"/>
-        <spirit:internalPortReference spirit:componentRef="tape_interface_0" spirit:portRef="ip2bus_mstrd_d"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>myip_burst_read_test_1_ip2bus_otputs</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_1" spirit:portRef="ip2bus_otputs"/>
-        <spirit:internalPortReference spirit:componentRef="tape_interface_0" spirit:portRef="ip2bus_otputs"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>block_test_0_motor_control</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="motor_control"/>
-        <spirit:internalPortReference spirit:componentRef="tape_interface_0" spirit:portRef="motor_control"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>clk_wiz_0_locked</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="locked"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="locked"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>tape_interface_0_pwm</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="tape_interface_0" spirit:portRef="pwm"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="pwm"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="pwm"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="flag1"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>tape_interface_0_ip2bus_mst_addr</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="tape_interface_0" spirit:portRef="ip2bus_mst_addr"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_1" spirit:portRef="ip2bus_mst_addr"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>tape_interface_0_ip2bus_mst_length</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="tape_interface_0" spirit:portRef="ip2bus_mst_length"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_1" spirit:portRef="ip2bus_mst_length"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>tape_interface_0_ip2bus_inputs</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="tape_interface_0" spirit:portRef="ip2bus_inputs"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_1" spirit:portRef="ip2bus_inputs"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>myip_burst_test_0_tape_button</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="tape_button"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="tape_button"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>myip_burst_test_0_joybits</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="joybits"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="joybits"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>myip_burst_test_0_joybits2</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="joybits2"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="joybits2"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_RESET0_N"/>
-        <spirit:internalPortReference spirit:componentRef="rst_ps7_0_100M" spirit:portRef="ext_reset_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>rst_ps7_0_100M_peripheral_aresetn</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="rst_ps7_0_100M" spirit:portRef="peripheral_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_0" spirit:portRef="m00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="s00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="m00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="axi_smc" spirit:portRef="aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_read_test_1" spirit:portRef="m00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="reset"/>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="proc_rst"/>
-        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ARESETN"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>rst_ps7_0_100M_interconnect_aresetn</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="rst_ps7_0_100M" spirit:portRef="interconnect_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="ARESETN"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>myip_burst_test_0_c64_mode</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="myip_burst_test_0" spirit:portRef="c64_mode"/>
-        <spirit:internalPortReference spirit:componentRef="vga_tst_c64_0" spirit:portRef="c64_mode_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>processing_system7_0_I2C1_SDA_T</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="I2C1_SDA_T"/>
-        <spirit:internalPortReference spirit:componentRef="iobuf_0" spirit:portRef="tristate"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>processing_system7_0_I2C1_SDA_O</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="I2C1_SDA_O"/>
-        <spirit:internalPortReference spirit:componentRef="iobuf_0" spirit:portRef="in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>iobuf_0_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="iobuf_0" spirit:portRef="out"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="I2C1_SDA_I"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>processing_system7_0_I2C1_SCL_O</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="I2C1_SCL_O"/>
-        <spirit:internalPortReference spirit:componentRef="iobuf_1" spirit:portRef="in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>processing_system7_0_I2C1_SCL_T</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="I2C1_SCL_T"/>
-        <spirit:internalPortReference spirit:componentRef="iobuf_1" spirit:portRef="tristate"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>iobuf_1_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="iobuf_1" spirit:portRef="out"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="I2C1_SCL_I"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Net</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out2"/>
-        <spirit:internalPortReference spirit:componentRef="oddr_buf_0" spirit:portRef="clk_in"/>
-        <spirit:internalPortReference spirit:componentRef="i2s_0" spirit:portRef="clk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>block_test_0_audio_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="block_test_0" spirit:portRef="audio_out"/>
-        <spirit:internalPortReference spirit:componentRef="i2s_0" spirit:portRef="audio_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Net1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="ac_sda"/>
-        <spirit:internalPortReference spirit:componentRef="iobuf_0" spirit:portRef="pin"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Net2</spirit:name>
-        <spirit:externalPortReference spirit:portRef="ac_scl"/>
-        <spirit:internalPortReference spirit:componentRef="iobuf_1" spirit:portRef="pin"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>i2s_0_mute_en</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="i2s_0" spirit:portRef="mute_en"/>
-        <spirit:externalPortReference spirit:portRef="ac_muten"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>oddr_buf_0_Mlck_O</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="oddr_buf_0" spirit:portRef="Mlck_O"/>
-        <spirit:externalPortReference spirit:portRef="ac_mclk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>i2s_0_clk_1_5_mhz</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="i2s_0" spirit:portRef="clk_1_5_mhz"/>
-        <spirit:externalPortReference spirit:portRef="ac_bclk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>i2s_0_out_data</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="i2s_0" spirit:portRef="out_data"/>
-        <spirit:externalPortReference spirit:portRef="ac_pbdat"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>i2s_0_channel_enable</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="i2s_0" spirit:portRef="channel_enable"/>
-        <spirit:externalPortReference spirit:portRef="ac_pblrc"/>
-        <spirit:externalPortReference spirit:portRef="ac_reclrc"/>
-      </spirit:adHocConnection>
-    </spirit:adHocConnections>
-    <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="DDR_0/processing_system7_0_DDR">
-        <spirit:activeInterface spirit:busRef="DDR" spirit:componentRef="processing_system7_0"/>
-      </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="FIXED_IO_0/processing_system7_0_FIXED_IO">
-        <spirit:activeInterface spirit:busRef="FIXED_IO" spirit:componentRef="processing_system7_0"/>
-      </spirit:hierConnection>
-    </spirit:hierConnections>
-  </spirit:design>
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram/design_1_imp</spirit:library>
-    <spirit:name>ps7_0_axi_periph</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:busInterfaces>
-      <spirit:busInterface>
-        <spirit:name>S00_AXI</spirit:name>
-        <spirit:slave/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>M00_AXI</spirit:name>
-        <spirit:master/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.S00_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>S00_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>S00_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>S00_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.S00_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>S00_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.M00_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M00_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>M00_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>M00_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.M00_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M00_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-    </spirit:busInterfaces>
-    <spirit:model>
-      <spirit:views>
-        <spirit:view>
-          <spirit:name>BlockDiagram</spirit:name>
-          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
-          <spirit:hierarchyRef spirit:library="BlockDiagram/design_1_imp" spirit:name="ps7_0_axi_periph_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-        </spirit:view>
-      </spirit:views>
-      <spirit:ports>
-        <spirit:port>
-          <spirit:name>ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>S00_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>S00_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>M00_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>M00_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-      </spirit:ports>
-    </spirit:model>
-  </spirit:component>
-
-  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram/design_1_imp</spirit:library>
-    <spirit:name>ps7_0_axi_periph_imp</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:componentInstances>
-      <spirit:componentInstance>
-        <spirit:instanceName>s00_couplers</spirit:instanceName>
-        <spirit:componentRef spirit:library="BlockDiagram/design_1_imp/ps7_0_axi_periph_imp" spirit:name="s00_couplers" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-      </spirit:componentInstance>
-    </spirit:componentInstances>
-    <spirit:interconnections/>
-    <spirit:adHocConnections>
-      <spirit:adHocConnection>
-        <spirit:name>ps7_0_axi_periph_ACLK_net</spirit:name>
-        <spirit:externalPortReference spirit:portRef="M00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="s00_couplers" spirit:portRef="M_ACLK"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>ps7_0_axi_periph_ARESETN_net</spirit:name>
-        <spirit:externalPortReference spirit:portRef="M00_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="s00_couplers" spirit:portRef="M_ARESETN"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>S00_ACLK_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="S00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="s00_couplers" spirit:portRef="S_ACLK"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>S00_ARESETN_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="S00_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="s00_couplers" spirit:portRef="S_ARESETN"/>
-      </spirit:adHocConnection>
-    </spirit:adHocConnections>
-    <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="S00_AXI/ps7_0_axi_periph_to_s00_couplers">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="s00_couplers"/>
-      </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="M00_AXI/s00_couplers_to_ps7_0_axi_periph">
-        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="s00_couplers"/>
-      </spirit:hierConnection>
-    </spirit:hierConnections>
-  </spirit:design>
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram/design_1_imp/ps7_0_axi_periph_imp</spirit:library>
-    <spirit:name>s00_couplers</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:busInterfaces>
-      <spirit:busInterface>
-        <spirit:name>M_AXI</spirit:name>
-        <spirit:master/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>S_AXI</spirit:name>
-        <spirit:slave/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.M_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>M_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>M_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.M_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.S_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>S_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>S_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>S_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.S_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>S_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-    </spirit:busInterfaces>
-    <spirit:model>
-      <spirit:views>
-        <spirit:view>
-          <spirit:name>BlockDiagram</spirit:name>
-          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
-          <spirit:hierarchyRef spirit:library="BlockDiagram/design_1_imp/ps7_0_axi_periph_imp" spirit:name="s00_couplers_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-        </spirit:view>
-      </spirit:views>
-      <spirit:ports>
-        <spirit:port>
-          <spirit:name>M_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>M_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>S_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>S_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-      </spirit:ports>
-    </spirit:model>
-  </spirit:component>
-
-  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram/design_1_imp/ps7_0_axi_periph_imp</spirit:library>
-    <spirit:name>s00_couplers_imp</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:componentInstances>
-      <spirit:componentInstance>
-        <spirit:instanceName>auto_pc</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="axi_protocol_converter" spirit:vendor="xilinx.com" spirit:version="2.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_auto_pc_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SI_PROTOCOL">AXI3</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MI_PROTOCOL">AXI4LITE</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-    </spirit:componentInstances>
-    <spirit:interconnections/>
-    <spirit:adHocConnections>
-      <spirit:adHocConnection>
-        <spirit:name>S_ACLK_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="S_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="auto_pc" spirit:portRef="aclk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>S_ARESETN_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="S_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="auto_pc" spirit:portRef="aresetn"/>
-      </spirit:adHocConnection>
-    </spirit:adHocConnections>
-    <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="M_AXI/auto_pc_to_s00_couplers">
-        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="auto_pc"/>
-      </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="S_AXI/s00_couplers_to_auto_pc">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_pc"/>
-      </spirit:hierConnection>
-    </spirit:hierConnections>
-  </spirit:design>
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>user.org</spirit:vendor>
-    <spirit:library>Addressing/myip_burst_read_test_0</spirit:library>
-    <spirit:name>myip_burst_read_test</spirit:name>
-    <spirit:version>1.0</spirit:version>
-    <spirit:addressSpaces>
-      <spirit:addressSpace>
-        <spirit:name>M00_AXI</spirit:name>
-        <spirit:range>4G</spirit:range>
-        <spirit:width>32</spirit:width>
-        <spirit:segments>
-          <spirit:segment>
-            <spirit:name>SEG_processing_system7_0_GP0_DDR_LOWOCM</spirit:name>
-            <spirit:displayName>/processing_system7_0/S_AXI_GP0/GP0_DDR_LOWOCM</spirit:displayName>
-            <spirit:addressOffset>0x00000000</spirit:addressOffset>
-            <spirit:range>512M</spirit:range>
-          </spirit:segment>
-        </spirit:segments>
-      </spirit:addressSpace>
-    </spirit:addressSpaces>
-  </spirit:component>
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>user.org</spirit:vendor>
-    <spirit:library>Addressing/myip_burst_read_test_1</spirit:library>
-    <spirit:name>myip_burst_read_test</spirit:name>
-    <spirit:version>1.0</spirit:version>
-    <spirit:addressSpaces>
-      <spirit:addressSpace>
-        <spirit:name>M00_AXI</spirit:name>
-        <spirit:range>4G</spirit:range>
-        <spirit:width>32</spirit:width>
-        <spirit:segments>
-          <spirit:segment>
-            <spirit:name>SEG_processing_system7_0_GP1_DDR_LOWOCM</spirit:name>
-            <spirit:displayName>/processing_system7_0/S_AXI_GP1/GP1_DDR_LOWOCM</spirit:displayName>
-            <spirit:addressOffset>0x10000000</spirit:addressOffset>
-            <spirit:range>256M</spirit:range>
-          </spirit:segment>
-        </spirit:segments>
-      </spirit:addressSpace>
-    </spirit:addressSpaces>
-  </spirit:component>
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>user.org</spirit:vendor>
-    <spirit:library>Addressing/myip_burst_test_0</spirit:library>
-    <spirit:name>myip_burst_test</spirit:name>
-    <spirit:version>1.0</spirit:version>
-    <spirit:addressSpaces>
-      <spirit:addressSpace>
-        <spirit:name>M00_AXI</spirit:name>
-        <spirit:range>4G</spirit:range>
-        <spirit:width>32</spirit:width>
-        <spirit:segments>
-          <spirit:segment>
-            <spirit:name>SEG_processing_system7_0_GP1_DDR_LOWOCM</spirit:name>
-            <spirit:displayName>/processing_system7_0/S_AXI_GP1/GP1_DDR_LOWOCM</spirit:displayName>
-            <spirit:addressOffset>0x10000000</spirit:addressOffset>
-            <spirit:range>256M</spirit:range>
-          </spirit:segment>
-        </spirit:segments>
-      </spirit:addressSpace>
-    </spirit:addressSpaces>
-  </spirit:component>
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>Addressing/processing_system7_0</spirit:library>
-    <spirit:name>processing_system7</spirit:name>
-    <spirit:version>5.5</spirit:version>
-    <spirit:addressSpaces>
-      <spirit:addressSpace>
-        <spirit:name>Data</spirit:name>
-        <spirit:range>4G</spirit:range>
-        <spirit:width>32</spirit:width>
-        <spirit:segments>
-          <spirit:segment>
-            <spirit:name>SEG_myip_burst_test_0_S00_AXI_reg</spirit:name>
-            <spirit:displayName>/myip_burst_test_0/S00_AXI/S00_AXI_reg</spirit:displayName>
-            <spirit:addressOffset>0x43C00000</spirit:addressOffset>
-            <spirit:range>64K</spirit:range>
-          </spirit:segment>
-        </spirit:segments>
-      </spirit:addressSpace>
-    </spirit:addressSpaces>
-  </spirit:component>
-
-</bd:repository>
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x3C213F2A817DAC4F",
+      "device": "xc7z010clg400-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "myip_burst_read_test_0": "",
+      "tape_interface_0": "",
+      "myip_burst_read_test_1": "",
+      "block_test_0": "",
+      "vga_tst_c64_0": "",
+      "i2s_0": "",
+      "iobuf_0": "",
+      "iobuf_1": "",
+      "oddr_buf_0": "",
+      "axi_smc": "",
+      "processing_system7_0": "",
+      "ps7_0_axi_periph": {
+        "s00_couplers": {
+          "auto_pc": ""
+        }
+      },
+      "rst_ps7_0_100M": "",
+      "clk_wiz_0": "",
+      "clk_wiz_1": "",
+      "myip_burst_test_0": ""
+    },
+    "interface_ports": {
+      "DDR_0": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0",
+        "parameters": {
+          "AXI_ARBITRATION_SCHEME": {
+            "value": "TDM",
+            "value_src": "default"
+          },
+          "BURST_LENGTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "CAS_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CAS_WRITE_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CS_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_MASK_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_WIDTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "MEMORY_TYPE": {
+            "value": "COMPONENTS",
+            "value_src": "default"
+          },
+          "MEM_ADDR_MAP": {
+            "value": "ROW_COLUMN_BANK",
+            "value_src": "default"
+          },
+          "SLOT": {
+            "value": "Single",
+            "value_src": "default"
+          },
+          "TIMEPERIOD_PS": {
+            "value": "1250",
+            "value_src": "default"
+          }
+        }
+      },
+      "FIXED_IO_0": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "ports": {
+      "vga_r": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "vga_g": {
+        "direction": "O",
+        "left": "5",
+        "right": "0"
+      },
+      "vga_b": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "vga_vs": {
+        "direction": "O"
+      },
+      "vga_hs": {
+        "direction": "O"
+      },
+      "ac_sda": {
+        "direction": "IO"
+      },
+      "ac_scl": {
+        "direction": "IO"
+      },
+      "ac_muten": {
+        "direction": "O"
+      },
+      "ac_mclk": {
+        "direction": "O"
+      },
+      "ac_bclk": {
+        "direction": "O"
+      },
+      "ac_pbdat": {
+        "direction": "O"
+      },
+      "ac_pblrc": {
+        "direction": "O"
+      },
+      "ac_reclrc": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "myip_burst_read_test_0": {
+        "vlnv": "user.org:user:myip_burst_read_test:1.0",
+        "xci_name": "design_1_myip_burst_read_test_0_1"
+      },
+      "tape_interface_0": {
+        "vlnv": "user.org:user:tape_interface:1.0",
+        "xci_name": "design_1_tape_interface_0_0"
+      },
+      "myip_burst_read_test_1": {
+        "vlnv": "user.org:user:myip_burst_read_test:1.0",
+        "xci_name": "design_1_myip_burst_read_test_1_0"
+      },
+      "block_test_0": {
+        "vlnv": "user.org:user:block_test:1.0",
+        "xci_name": "design_1_block_test_0_0"
+      },
+      "vga_tst_c64_0": {
+        "vlnv": "user.org:user:vga_tst_c64:1.0",
+        "xci_name": "design_1_vga_tst_c64_0_1"
+      },
+      "i2s_0": {
+        "vlnv": "user.org:user:i2s:1.0",
+        "xci_name": "design_1_i2s_0_0"
+      },
+      "iobuf_0": {
+        "vlnv": "user.org:user:iobuf:1.0",
+        "xci_name": "design_1_iobuf_0_0"
+      },
+      "iobuf_1": {
+        "vlnv": "user.org:user:iobuf:1.0",
+        "xci_name": "design_1_iobuf_1_0"
+      },
+      "oddr_buf_0": {
+        "vlnv": "user.org:user:oddr_buf:1.0",
+        "xci_name": "design_1_oddr_buf_0_0"
+      },
+      "axi_smc": {
+        "vlnv": "xilinx.com:ip:smartconnect:1.0",
+        "xci_name": "design_1_axi_smc_2",
+        "parameters": {
+          "NUM_MI": {
+            "value": "2"
+          },
+          "NUM_SI": {
+            "value": "3"
+          }
+        },
+        "interface_ports": {
+          "S00_AXI": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "bridges": [
+              "M00_AXI",
+              "M01_AXI"
+            ]
+          },
+          "S01_AXI": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "bridges": [
+              "M00_AXI",
+              "M01_AXI"
+            ]
+          },
+          "S02_AXI": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "bridges": [
+              "M00_AXI",
+              "M01_AXI"
+            ]
+          },
+          "M00_AXI": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "M01_AXI": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          }
+        }
+      },
+      "processing_system7_0": {
+        "vlnv": "xilinx.com:ip:processing_system7:5.5",
+        "xci_name": "design_1_processing_system7_0_2",
+        "parameters": {
+          "PCW_ACT_APU_PERIPHERAL_FREQMHZ": {
+            "value": "650.000000"
+          },
+          "PCW_ACT_CAN0_PERIPHERAL_FREQMHZ": {
+            "value": "23.8095"
+          },
+          "PCW_ACT_CAN1_PERIPHERAL_FREQMHZ": {
+            "value": "23.8095"
+          },
+          "PCW_ACT_CAN_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_DCI_PERIPHERAL_FREQMHZ": {
+            "value": "10.096154"
+          },
+          "PCW_ACT_ENET0_PERIPHERAL_FREQMHZ": {
+            "value": "125.000000"
+          },
+          "PCW_ACT_ENET1_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
+            "value": "100.000000"
+          },
+          "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_I2C_PERIPHERAL_FREQMHZ": {
+            "value": "50"
+          },
+          "PCW_ACT_PCAP_PERIPHERAL_FREQMHZ": {
+            "value": "200.000000"
+          },
+          "PCW_ACT_QSPI_PERIPHERAL_FREQMHZ": {
+            "value": "200.000000"
+          },
+          "PCW_ACT_SDIO_PERIPHERAL_FREQMHZ": {
+            "value": "50.000000"
+          },
+          "PCW_ACT_SMC_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_SPI_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_TPIU_PERIPHERAL_FREQMHZ": {
+            "value": "200.000000"
+          },
+          "PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ": {
+            "value": "108.333336"
+          },
+          "PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ": {
+            "value": "108.333336"
+          },
+          "PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ": {
+            "value": "108.333336"
+          },
+          "PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ": {
+            "value": "108.333336"
+          },
+          "PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ": {
+            "value": "108.333336"
+          },
+          "PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ": {
+            "value": "108.333336"
+          },
+          "PCW_ACT_TTC_PERIPHERAL_FREQMHZ": {
+            "value": "50"
+          },
+          "PCW_ACT_UART_PERIPHERAL_FREQMHZ": {
+            "value": "100.000000"
+          },
+          "PCW_ACT_USB0_PERIPHERAL_FREQMHZ": {
+            "value": "60"
+          },
+          "PCW_ACT_USB1_PERIPHERAL_FREQMHZ": {
+            "value": "60"
+          },
+          "PCW_ACT_WDT_PERIPHERAL_FREQMHZ": {
+            "value": "108.333336"
+          },
+          "PCW_APU_CLK_RATIO_ENABLE": {
+            "value": "6:2:1"
+          },
+          "PCW_APU_PERIPHERAL_FREQMHZ": {
+            "value": "650"
+          },
+          "PCW_CAN0_PERIPHERAL_CLKSRC": {
+            "value": "External"
+          },
+          "PCW_CAN0_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_CAN1_PERIPHERAL_CLKSRC": {
+            "value": "External"
+          },
+          "PCW_CAN1_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_CAN_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_CAN_PERIPHERAL_VALID": {
+            "value": "0"
+          },
+          "PCW_CLK0_FREQ": {
+            "value": "100000000"
+          },
+          "PCW_CLK1_FREQ": {
+            "value": "10000000"
+          },
+          "PCW_CLK2_FREQ": {
+            "value": "10000000"
+          },
+          "PCW_CLK3_FREQ": {
+            "value": "10000000"
+          },
+          "PCW_CPU_CPU_6X4X_MAX_RANGE": {
+            "value": "667"
+          },
+          "PCW_CPU_PERIPHERAL_CLKSRC": {
+            "value": "ARM PLL"
+          },
+          "PCW_CRYSTAL_PERIPHERAL_FREQMHZ": {
+            "value": "50.000000"
+          },
+          "PCW_DCI_PERIPHERAL_CLKSRC": {
+            "value": "DDR PLL"
+          },
+          "PCW_DCI_PERIPHERAL_FREQMHZ": {
+            "value": "10.159"
+          },
+          "PCW_DDR_PERIPHERAL_CLKSRC": {
+            "value": "DDR PLL"
+          },
+          "PCW_DDR_RAM_BASEADDR": {
+            "value": "0x00100000"
+          },
+          "PCW_DDR_RAM_HIGHADDR": {
+            "value": "0x1FFFFFFF"
+          },
+          "PCW_DM_WIDTH": {
+            "value": "4"
+          },
+          "PCW_DQS_WIDTH": {
+            "value": "4"
+          },
+          "PCW_DQ_WIDTH": {
+            "value": "32"
+          },
+          "PCW_ENET0_BASEADDR": {
+            "value": "0xE000B000"
+          },
+          "PCW_ENET0_ENET0_IO": {
+            "value": "MIO 16 .. 27"
+          },
+          "PCW_ENET0_GRP_MDIO_ENABLE": {
+            "value": "1"
+          },
+          "PCW_ENET0_GRP_MDIO_IO": {
+            "value": "EMIO"
+          },
+          "PCW_ENET0_HIGHADDR": {
+            "value": "0xE000BFFF"
+          },
+          "PCW_ENET0_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_ENET0_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_ENET0_PERIPHERAL_FREQMHZ": {
+            "value": "1000 Mbps"
+          },
+          "PCW_ENET1_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_ENET1_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_ENET_RESET_ENABLE": {
+            "value": "0"
+          },
+          "PCW_ENET_RESET_POLARITY": {
+            "value": "Active Low"
+          },
+          "PCW_EN_4K_TIMER": {
+            "value": "0"
+          },
+          "PCW_EN_CAN0": {
+            "value": "0"
+          },
+          "PCW_EN_CAN1": {
+            "value": "0"
+          },
+          "PCW_EN_CLK0_PORT": {
+            "value": "1"
+          },
+          "PCW_EN_CLK1_PORT": {
+            "value": "0"
+          },
+          "PCW_EN_CLK2_PORT": {
+            "value": "0"
+          },
+          "PCW_EN_CLK3_PORT": {
+            "value": "0"
+          },
+          "PCW_EN_CLKTRIG0_PORT": {
+            "value": "0"
+          },
+          "PCW_EN_CLKTRIG1_PORT": {
+            "value": "0"
+          },
+          "PCW_EN_CLKTRIG2_PORT": {
+            "value": "0"
+          },
+          "PCW_EN_CLKTRIG3_PORT": {
+            "value": "0"
+          },
+          "PCW_EN_DDR": {
+            "value": "1"
+          },
+          "PCW_EN_EMIO_CAN0": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_CAN1": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_CD_SDIO0": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_CD_SDIO1": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_ENET0": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_ENET1": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_GPIO": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_I2C0": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_I2C1": {
+            "value": "1"
+          },
+          "PCW_EN_EMIO_MODEM_UART0": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_MODEM_UART1": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_PJTAG": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_SDIO0": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_SDIO1": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_SPI0": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_SPI1": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_SRAM_INT": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_TRACE": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_TTC0": {
+            "value": "1"
+          },
+          "PCW_EN_EMIO_TTC1": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_UART0": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_UART1": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_WDT": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_WP_SDIO0": {
+            "value": "1"
+          },
+          "PCW_EN_EMIO_WP_SDIO1": {
+            "value": "0"
+          },
+          "PCW_EN_ENET0": {
+            "value": "1"
+          },
+          "PCW_EN_ENET1": {
+            "value": "0"
+          },
+          "PCW_EN_GPIO": {
+            "value": "1"
+          },
+          "PCW_EN_I2C0": {
+            "value": "0"
+          },
+          "PCW_EN_I2C1": {
+            "value": "1"
+          },
+          "PCW_EN_MODEM_UART0": {
+            "value": "0"
+          },
+          "PCW_EN_MODEM_UART1": {
+            "value": "0"
+          },
+          "PCW_EN_PJTAG": {
+            "value": "0"
+          },
+          "PCW_EN_PTP_ENET0": {
+            "value": "0"
+          },
+          "PCW_EN_PTP_ENET1": {
+            "value": "0"
+          },
+          "PCW_EN_QSPI": {
+            "value": "1"
+          },
+          "PCW_EN_RST0_PORT": {
+            "value": "1"
+          },
+          "PCW_EN_RST1_PORT": {
+            "value": "0"
+          },
+          "PCW_EN_RST2_PORT": {
+            "value": "0"
+          },
+          "PCW_EN_RST3_PORT": {
+            "value": "0"
+          },
+          "PCW_EN_SDIO0": {
+            "value": "1"
+          },
+          "PCW_EN_SDIO1": {
+            "value": "0"
+          },
+          "PCW_EN_SMC": {
+            "value": "0"
+          },
+          "PCW_EN_SPI0": {
+            "value": "0"
+          },
+          "PCW_EN_SPI1": {
+            "value": "0"
+          },
+          "PCW_EN_TRACE": {
+            "value": "0"
+          },
+          "PCW_EN_TTC0": {
+            "value": "1"
+          },
+          "PCW_EN_TTC1": {
+            "value": "0"
+          },
+          "PCW_EN_UART0": {
+            "value": "0"
+          },
+          "PCW_EN_UART1": {
+            "value": "1"
+          },
+          "PCW_EN_USB0": {
+            "value": "1"
+          },
+          "PCW_EN_USB1": {
+            "value": "0"
+          },
+          "PCW_EN_WDT": {
+            "value": "0"
+          },
+          "PCW_FCLK0_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_FCLK1_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_FCLK2_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_FCLK3_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_FCLK_CLK0_BUF": {
+            "value": "TRUE"
+          },
+          "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
+            "value": "100"
+          },
+          "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
+            "value": "50"
+          },
+          "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
+            "value": "50"
+          },
+          "PCW_FPGA3_PERIPHERAL_FREQMHZ": {
+            "value": "50"
+          },
+          "PCW_FPGA_FCLK0_ENABLE": {
+            "value": "1"
+          },
+          "PCW_GP0_EN_MODIFIABLE_TXN": {
+            "value": "0"
+          },
+          "PCW_GP0_NUM_READ_THREADS": {
+            "value": "4"
+          },
+          "PCW_GP0_NUM_WRITE_THREADS": {
+            "value": "4"
+          },
+          "PCW_GP1_EN_MODIFIABLE_TXN": {
+            "value": "0"
+          },
+          "PCW_GP1_NUM_READ_THREADS": {
+            "value": "4"
+          },
+          "PCW_GP1_NUM_WRITE_THREADS": {
+            "value": "4"
+          },
+          "PCW_GPIO_BASEADDR": {
+            "value": "0xE000A000"
+          },
+          "PCW_GPIO_EMIO_GPIO_ENABLE": {
+            "value": "0"
+          },
+          "PCW_GPIO_HIGHADDR": {
+            "value": "0xE000AFFF"
+          },
+          "PCW_GPIO_MIO_GPIO_ENABLE": {
+            "value": "1"
+          },
+          "PCW_GPIO_MIO_GPIO_IO": {
+            "value": "MIO"
+          },
+          "PCW_GPIO_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_I2C0_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_I2C1_BASEADDR": {
+            "value": "0xE0005000"
+          },
+          "PCW_I2C1_HIGHADDR": {
+            "value": "0xE0005FFF"
+          },
+          "PCW_I2C1_I2C1_IO": {
+            "value": "EMIO"
+          },
+          "PCW_I2C1_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_I2C_PERIPHERAL_FREQMHZ": {
+            "value": "108.333336"
+          },
+          "PCW_I2C_RESET_ENABLE": {
+            "value": "0"
+          },
+          "PCW_I2C_RESET_POLARITY": {
+            "value": "Active Low"
+          },
+          "PCW_IMPORT_BOARD_PRESET": {
+            "value": "None"
+          },
+          "PCW_INCLUDE_ACP_TRANS_CHECK": {
+            "value": "0"
+          },
+          "PCW_MIO_0_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_0_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_0_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_10_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_10_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_10_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_11_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_11_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_11_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_12_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_12_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_12_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_13_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_13_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_13_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_14_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_14_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_14_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_15_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_15_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_15_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_16_IOTYPE": {
+            "value": "HSTL 1.8V"
+          },
+          "PCW_MIO_16_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_16_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_17_IOTYPE": {
+            "value": "HSTL 1.8V"
+          },
+          "PCW_MIO_17_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_17_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_18_IOTYPE": {
+            "value": "HSTL 1.8V"
+          },
+          "PCW_MIO_18_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_18_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_19_IOTYPE": {
+            "value": "HSTL 1.8V"
+          },
+          "PCW_MIO_19_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_19_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_1_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_1_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_1_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_20_IOTYPE": {
+            "value": "HSTL 1.8V"
+          },
+          "PCW_MIO_20_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_20_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_21_IOTYPE": {
+            "value": "HSTL 1.8V"
+          },
+          "PCW_MIO_21_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_21_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_22_IOTYPE": {
+            "value": "HSTL 1.8V"
+          },
+          "PCW_MIO_22_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_22_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_23_IOTYPE": {
+            "value": "HSTL 1.8V"
+          },
+          "PCW_MIO_23_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_23_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_24_IOTYPE": {
+            "value": "HSTL 1.8V"
+          },
+          "PCW_MIO_24_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_24_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_25_IOTYPE": {
+            "value": "HSTL 1.8V"
+          },
+          "PCW_MIO_25_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_25_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_26_IOTYPE": {
+            "value": "HSTL 1.8V"
+          },
+          "PCW_MIO_26_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_26_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_27_IOTYPE": {
+            "value": "HSTL 1.8V"
+          },
+          "PCW_MIO_27_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_27_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_28_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_28_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_28_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_29_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_29_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_29_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_2_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_2_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_30_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_30_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_30_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_31_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_31_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_31_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_32_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_32_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_32_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_33_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_33_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_33_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_34_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_34_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_34_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_35_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_35_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_35_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_36_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_36_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_36_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_37_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_37_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_37_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_38_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_38_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_38_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_39_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_39_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_39_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_3_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_3_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_40_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_40_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_40_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_41_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_41_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_41_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_42_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_42_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_42_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_43_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_43_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_43_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_44_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_44_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_44_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_45_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_45_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_45_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_46_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_46_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_46_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_47_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_47_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_47_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_48_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_48_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_48_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_49_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_49_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_49_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_4_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_4_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_50_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_50_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_50_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_51_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_51_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_51_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_52_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_52_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_52_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_53_IOTYPE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_MIO_53_PULLUP": {
+            "value": "disabled"
+          },
+          "PCW_MIO_53_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_5_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_5_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_6_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_6_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_7_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_7_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_8_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_8_SLEW": {
+            "value": "fast"
+          },
+          "PCW_MIO_9_IOTYPE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_MIO_9_PULLUP": {
+            "value": "enabled"
+          },
+          "PCW_MIO_9_SLEW": {
+            "value": "slow"
+          },
+          "PCW_MIO_PRIMITIVE": {
+            "value": "54"
+          },
+          "PCW_MIO_TREE_PERIPHERALS": {
+            "value": "GPIO#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#GPIO#Quad SPI Flash#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#GPIO#SD 0#UART 1#UART 1#GPIO#GPIO#GPIO#GPIO"
+          },
+          "PCW_MIO_TREE_SIGNALS": {
+            "value": "gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]/HOLD_B#qspi0_sclk#gpio[7]#qspi_fbclk#gpio[9]#gpio[10]#gpio[11]#gpio[12]#gpio[13]#gpio[14]#gpio[15]#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#gpio[46]#cd#tx#rx#gpio[50]#gpio[51]#gpio[52]#gpio[53]"
+          },
+          "PCW_M_AXI_GP0_ENABLE_STATIC_REMAP": {
+            "value": "0"
+          },
+          "PCW_M_AXI_GP0_ID_WIDTH": {
+            "value": "12"
+          },
+          "PCW_M_AXI_GP0_SUPPORT_NARROW_BURST": {
+            "value": "0"
+          },
+          "PCW_M_AXI_GP0_THREAD_ID_WIDTH": {
+            "value": "12"
+          },
+          "PCW_NAND_CYCLES_T_AR": {
+            "value": "1"
+          },
+          "PCW_NAND_CYCLES_T_CLR": {
+            "value": "1"
+          },
+          "PCW_NAND_CYCLES_T_RC": {
+            "value": "11"
+          },
+          "PCW_NAND_CYCLES_T_REA": {
+            "value": "1"
+          },
+          "PCW_NAND_CYCLES_T_RR": {
+            "value": "1"
+          },
+          "PCW_NAND_CYCLES_T_WC": {
+            "value": "11"
+          },
+          "PCW_NAND_CYCLES_T_WP": {
+            "value": "1"
+          },
+          "PCW_NOR_CS0_T_CEOE": {
+            "value": "1"
+          },
+          "PCW_NOR_CS0_T_PC": {
+            "value": "1"
+          },
+          "PCW_NOR_CS0_T_RC": {
+            "value": "11"
+          },
+          "PCW_NOR_CS0_T_TR": {
+            "value": "1"
+          },
+          "PCW_NOR_CS0_T_WC": {
+            "value": "11"
+          },
+          "PCW_NOR_CS0_T_WP": {
+            "value": "1"
+          },
+          "PCW_NOR_CS0_WE_TIME": {
+            "value": "0"
+          },
+          "PCW_NOR_CS1_T_CEOE": {
+            "value": "1"
+          },
+          "PCW_NOR_CS1_T_PC": {
+            "value": "1"
+          },
+          "PCW_NOR_CS1_T_RC": {
+            "value": "11"
+          },
+          "PCW_NOR_CS1_T_TR": {
+            "value": "1"
+          },
+          "PCW_NOR_CS1_T_WC": {
+            "value": "11"
+          },
+          "PCW_NOR_CS1_T_WP": {
+            "value": "1"
+          },
+          "PCW_NOR_CS1_WE_TIME": {
+            "value": "0"
+          },
+          "PCW_NOR_SRAM_CS0_T_CEOE": {
+            "value": "1"
+          },
+          "PCW_NOR_SRAM_CS0_T_PC": {
+            "value": "1"
+          },
+          "PCW_NOR_SRAM_CS0_T_RC": {
+            "value": "11"
+          },
+          "PCW_NOR_SRAM_CS0_T_TR": {
+            "value": "1"
+          },
+          "PCW_NOR_SRAM_CS0_T_WC": {
+            "value": "11"
+          },
+          "PCW_NOR_SRAM_CS0_T_WP": {
+            "value": "1"
+          },
+          "PCW_NOR_SRAM_CS0_WE_TIME": {
+            "value": "0"
+          },
+          "PCW_NOR_SRAM_CS1_T_CEOE": {
+            "value": "1"
+          },
+          "PCW_NOR_SRAM_CS1_T_PC": {
+            "value": "1"
+          },
+          "PCW_NOR_SRAM_CS1_T_RC": {
+            "value": "11"
+          },
+          "PCW_NOR_SRAM_CS1_T_TR": {
+            "value": "1"
+          },
+          "PCW_NOR_SRAM_CS1_T_WC": {
+            "value": "11"
+          },
+          "PCW_NOR_SRAM_CS1_T_WP": {
+            "value": "1"
+          },
+          "PCW_NOR_SRAM_CS1_WE_TIME": {
+            "value": "0"
+          },
+          "PCW_OVERRIDE_BASIC_CLOCK": {
+            "value": "0"
+          },
+          "PCW_PACKAGE_DDR_BOARD_DELAY0": {
+            "value": "0.080"
+          },
+          "PCW_PACKAGE_DDR_BOARD_DELAY1": {
+            "value": "0.063"
+          },
+          "PCW_PACKAGE_DDR_BOARD_DELAY2": {
+            "value": "0.057"
+          },
+          "PCW_PACKAGE_DDR_BOARD_DELAY3": {
+            "value": "0.068"
+          },
+          "PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_0": {
+            "value": "-0.047"
+          },
+          "PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_1": {
+            "value": "-0.025"
+          },
+          "PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_2": {
+            "value": "-0.006"
+          },
+          "PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_3": {
+            "value": "-0.017"
+          },
+          "PCW_PACKAGE_NAME": {
+            "value": "clg400"
+          },
+          "PCW_PCAP_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_PCAP_PERIPHERAL_FREQMHZ": {
+            "value": "200"
+          },
+          "PCW_PERIPHERAL_BOARD_PRESET": {
+            "value": "part0"
+          },
+          "PCW_PJTAG_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_PLL_BYPASSMODE_ENABLE": {
+            "value": "0"
+          },
+          "PCW_PRESET_BANK0_VOLTAGE": {
+            "value": "LVCMOS 3.3V"
+          },
+          "PCW_PRESET_BANK1_VOLTAGE": {
+            "value": "LVCMOS 1.8V"
+          },
+          "PCW_PS7_SI_REV": {
+            "value": "PRODUCTION"
+          },
+          "PCW_QSPI_GRP_FBCLK_ENABLE": {
+            "value": "1"
+          },
+          "PCW_QSPI_GRP_FBCLK_IO": {
+            "value": "MIO 8"
+          },
+          "PCW_QSPI_GRP_IO1_ENABLE": {
+            "value": "0"
+          },
+          "PCW_QSPI_GRP_SINGLE_SS_ENABLE": {
+            "value": "1"
+          },
+          "PCW_QSPI_GRP_SINGLE_SS_IO": {
+            "value": "MIO 1 .. 6"
+          },
+          "PCW_QSPI_GRP_SS1_ENABLE": {
+            "value": "0"
+          },
+          "PCW_QSPI_INTERNAL_HIGHADDRESS": {
+            "value": "0xFCFFFFFF"
+          },
+          "PCW_QSPI_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_QSPI_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_QSPI_PERIPHERAL_FREQMHZ": {
+            "value": "200"
+          },
+          "PCW_QSPI_QSPI_IO": {
+            "value": "MIO 1 .. 6"
+          },
+          "PCW_SD0_GRP_CD_ENABLE": {
+            "value": "1"
+          },
+          "PCW_SD0_GRP_CD_IO": {
+            "value": "MIO 47"
+          },
+          "PCW_SD0_GRP_POW_ENABLE": {
+            "value": "0"
+          },
+          "PCW_SD0_GRP_WP_ENABLE": {
+            "value": "1"
+          },
+          "PCW_SD0_GRP_WP_IO": {
+            "value": "EMIO"
+          },
+          "PCW_SD0_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_SD0_SD0_IO": {
+            "value": "MIO 40 .. 45"
+          },
+          "PCW_SD1_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_SDIO0_BASEADDR": {
+            "value": "0xE0100000"
+          },
+          "PCW_SDIO0_HIGHADDR": {
+            "value": "0xE0100FFF"
+          },
+          "PCW_SDIO_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_SDIO_PERIPHERAL_FREQMHZ": {
+            "value": "50"
+          },
+          "PCW_SDIO_PERIPHERAL_VALID": {
+            "value": "1"
+          },
+          "PCW_SINGLE_QSPI_DATA_MODE": {
+            "value": "x4"
+          },
+          "PCW_SMC_CYCLE_T0": {
+            "value": "NA"
+          },
+          "PCW_SMC_CYCLE_T1": {
+            "value": "NA"
+          },
+          "PCW_SMC_CYCLE_T2": {
+            "value": "NA"
+          },
+          "PCW_SMC_CYCLE_T3": {
+            "value": "NA"
+          },
+          "PCW_SMC_CYCLE_T4": {
+            "value": "NA"
+          },
+          "PCW_SMC_CYCLE_T5": {
+            "value": "NA"
+          },
+          "PCW_SMC_CYCLE_T6": {
+            "value": "NA"
+          },
+          "PCW_SMC_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_SMC_PERIPHERAL_VALID": {
+            "value": "0"
+          },
+          "PCW_SPI0_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_SPI1_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_SPI_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_SPI_PERIPHERAL_VALID": {
+            "value": "0"
+          },
+          "PCW_S_AXI_GP0_ID_WIDTH": {
+            "value": "6"
+          },
+          "PCW_S_AXI_GP1_ID_WIDTH": {
+            "value": "6"
+          },
+          "PCW_TPIU_PERIPHERAL_CLKSRC": {
+            "value": "External"
+          },
+          "PCW_TRACE_INTERNAL_WIDTH": {
+            "value": "2"
+          },
+          "PCW_TRACE_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_TTC0_BASEADDR": {
+            "value": "0xE0104000"
+          },
+          "PCW_TTC0_CLK0_PERIPHERAL_CLKSRC": {
+            "value": "CPU_1X"
+          },
+          "PCW_TTC0_CLK0_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
+          "PCW_TTC0_CLK1_PERIPHERAL_CLKSRC": {
+            "value": "CPU_1X"
+          },
+          "PCW_TTC0_CLK1_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
+          "PCW_TTC0_CLK2_PERIPHERAL_CLKSRC": {
+            "value": "CPU_1X"
+          },
+          "PCW_TTC0_CLK2_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
+          "PCW_TTC0_HIGHADDR": {
+            "value": "0xE0104fff"
+          },
+          "PCW_TTC0_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_TTC0_TTC0_IO": {
+            "value": "EMIO"
+          },
+          "PCW_TTC1_CLK0_PERIPHERAL_CLKSRC": {
+            "value": "CPU_1X"
+          },
+          "PCW_TTC1_CLK0_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
+          "PCW_TTC1_CLK1_PERIPHERAL_CLKSRC": {
+            "value": "CPU_1X"
+          },
+          "PCW_TTC1_CLK1_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
+          "PCW_TTC1_CLK2_PERIPHERAL_CLKSRC": {
+            "value": "CPU_1X"
+          },
+          "PCW_TTC1_CLK2_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
+          "PCW_TTC1_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_TTC_PERIPHERAL_FREQMHZ": {
+            "value": "50"
+          },
+          "PCW_UART0_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_UART1_BASEADDR": {
+            "value": "0xE0001000"
+          },
+          "PCW_UART1_BAUD_RATE": {
+            "value": "115200"
+          },
+          "PCW_UART1_GRP_FULL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_UART1_HIGHADDR": {
+            "value": "0xE0001FFF"
+          },
+          "PCW_UART1_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_UART1_UART1_IO": {
+            "value": "MIO 48 .. 49"
+          },
+          "PCW_UART_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
+          "PCW_UART_PERIPHERAL_FREQMHZ": {
+            "value": "100"
+          },
+          "PCW_UART_PERIPHERAL_VALID": {
+            "value": "1"
+          },
+          "PCW_UIPARAM_ACT_DDR_FREQ_MHZ": {
+            "value": "525.000000"
+          },
+          "PCW_UIPARAM_DDR_ADV_ENABLE": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_AL": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_BL": {
+            "value": "8"
+          },
+          "PCW_UIPARAM_DDR_BOARD_DELAY0": {
+            "value": "0.176"
+          },
+          "PCW_UIPARAM_DDR_BOARD_DELAY1": {
+            "value": "0.159"
+          },
+          "PCW_UIPARAM_DDR_BOARD_DELAY2": {
+            "value": "0.162"
+          },
+          "PCW_UIPARAM_DDR_BOARD_DELAY3": {
+            "value": "0.187"
+          },
+          "PCW_UIPARAM_DDR_BUS_WIDTH": {
+            "value": "32 Bit"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_0_LENGTH_MM": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_0_PACKAGE_LENGTH": {
+            "value": "54.563"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_0_PROPOGATION_DELAY": {
+            "value": "160"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_1_LENGTH_MM": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_1_PACKAGE_LENGTH": {
+            "value": "54.563"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_1_PROPOGATION_DELAY": {
+            "value": "160"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_2_LENGTH_MM": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_2_PACKAGE_LENGTH": {
+            "value": "54.563"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_2_PROPOGATION_DELAY": {
+            "value": "160"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_3_LENGTH_MM": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_3_PACKAGE_LENGTH": {
+            "value": "54.563"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_3_PROPOGATION_DELAY": {
+            "value": "160"
+          },
+          "PCW_UIPARAM_DDR_CLOCK_STOP_EN": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_DQS_0_LENGTH_MM": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_DQS_0_PACKAGE_LENGTH": {
+            "value": "101.239"
+          },
+          "PCW_UIPARAM_DDR_DQS_0_PROPOGATION_DELAY": {
+            "value": "160"
+          },
+          "PCW_UIPARAM_DDR_DQS_1_LENGTH_MM": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_DQS_1_PACKAGE_LENGTH": {
+            "value": "79.5025"
+          },
+          "PCW_UIPARAM_DDR_DQS_1_PROPOGATION_DELAY": {
+            "value": "160"
+          },
+          "PCW_UIPARAM_DDR_DQS_2_LENGTH_MM": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_DQS_2_PACKAGE_LENGTH": {
+            "value": "60.536"
+          },
+          "PCW_UIPARAM_DDR_DQS_2_PROPOGATION_DELAY": {
+            "value": "160"
+          },
+          "PCW_UIPARAM_DDR_DQS_3_LENGTH_MM": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_DQS_3_PACKAGE_LENGTH": {
+            "value": "71.7715"
+          },
+          "PCW_UIPARAM_DDR_DQS_3_PROPOGATION_DELAY": {
+            "value": "160"
+          },
+          "PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0": {
+            "value": "-0.073"
+          },
+          "PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1": {
+            "value": "-0.034"
+          },
+          "PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2": {
+            "value": "-0.03"
+          },
+          "PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3": {
+            "value": "-0.082"
+          },
+          "PCW_UIPARAM_DDR_DQ_0_LENGTH_MM": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_DQ_0_PACKAGE_LENGTH": {
+            "value": "104.5365"
+          },
+          "PCW_UIPARAM_DDR_DQ_0_PROPOGATION_DELAY": {
+            "value": "160"
+          },
+          "PCW_UIPARAM_DDR_DQ_1_LENGTH_MM": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_DQ_1_PACKAGE_LENGTH": {
+            "value": "70.676"
+          },
+          "PCW_UIPARAM_DDR_DQ_1_PROPOGATION_DELAY": {
+            "value": "160"
+          },
+          "PCW_UIPARAM_DDR_DQ_2_LENGTH_MM": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_DQ_2_PACKAGE_LENGTH": {
+            "value": "59.1615"
+          },
+          "PCW_UIPARAM_DDR_DQ_2_PROPOGATION_DELAY": {
+            "value": "160"
+          },
+          "PCW_UIPARAM_DDR_DQ_3_LENGTH_MM": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_DDR_DQ_3_PACKAGE_LENGTH": {
+            "value": "81.319"
+          },
+          "PCW_UIPARAM_DDR_DQ_3_PROPOGATION_DELAY": {
+            "value": "160"
+          },
+          "PCW_UIPARAM_DDR_ENABLE": {
+            "value": "1"
+          },
+          "PCW_UIPARAM_DDR_FREQ_MHZ": {
+            "value": "525"
+          },
+          "PCW_UIPARAM_DDR_HIGH_TEMP": {
+            "value": "Normal (0-85)"
+          },
+          "PCW_UIPARAM_DDR_MEMORY_TYPE": {
+            "value": "DDR 3"
+          },
+          "PCW_UIPARAM_DDR_PARTNO": {
+            "value": "MT41K128M16 JT-125"
+          },
+          "PCW_UIPARAM_DDR_TRAIN_DATA_EYE": {
+            "value": "1"
+          },
+          "PCW_UIPARAM_DDR_TRAIN_READ_GATE": {
+            "value": "1"
+          },
+          "PCW_UIPARAM_DDR_TRAIN_WRITE_LEVEL": {
+            "value": "1"
+          },
+          "PCW_UIPARAM_DDR_USE_INTERNAL_VREF": {
+            "value": "0"
+          },
+          "PCW_UIPARAM_GENERATE_SUMMARY": {
+            "value": "NA"
+          },
+          "PCW_USB0_BASEADDR": {
+            "value": "0xE0102000"
+          },
+          "PCW_USB0_HIGHADDR": {
+            "value": "0xE0102fff"
+          },
+          "PCW_USB0_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_USB0_USB0_IO": {
+            "value": "MIO 28 .. 39"
+          },
+          "PCW_USB1_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_USB_RESET_ENABLE": {
+            "value": "0"
+          },
+          "PCW_USB_RESET_POLARITY": {
+            "value": "Active Low"
+          },
+          "PCW_USE_AXI_FABRIC_IDLE": {
+            "value": "0"
+          },
+          "PCW_USE_AXI_NONSECURE": {
+            "value": "0"
+          },
+          "PCW_USE_CORESIGHT": {
+            "value": "0"
+          },
+          "PCW_USE_CROSS_TRIGGER": {
+            "value": "0"
+          },
+          "PCW_USE_CR_FABRIC": {
+            "value": "1"
+          },
+          "PCW_USE_DDR_BYPASS": {
+            "value": "0"
+          },
+          "PCW_USE_DEBUG": {
+            "value": "0"
+          },
+          "PCW_USE_DMA0": {
+            "value": "0"
+          },
+          "PCW_USE_DMA1": {
+            "value": "0"
+          },
+          "PCW_USE_DMA2": {
+            "value": "0"
+          },
+          "PCW_USE_DMA3": {
+            "value": "0"
+          },
+          "PCW_USE_EXPANDED_IOP": {
+            "value": "0"
+          },
+          "PCW_USE_FABRIC_INTERRUPT": {
+            "value": "0"
+          },
+          "PCW_USE_HIGH_OCM": {
+            "value": "0"
+          },
+          "PCW_USE_M_AXI_GP0": {
+            "value": "1"
+          },
+          "PCW_USE_M_AXI_GP1": {
+            "value": "0"
+          },
+          "PCW_USE_PROC_EVENT_BUS": {
+            "value": "0"
+          },
+          "PCW_USE_PS_SLCR_REGISTERS": {
+            "value": "0"
+          },
+          "PCW_USE_S_AXI_ACP": {
+            "value": "0"
+          },
+          "PCW_USE_S_AXI_GP0": {
+            "value": "1"
+          },
+          "PCW_USE_S_AXI_GP1": {
+            "value": "1"
+          },
+          "PCW_USE_S_AXI_HP0": {
+            "value": "0"
+          },
+          "PCW_USE_S_AXI_HP1": {
+            "value": "0"
+          },
+          "PCW_USE_S_AXI_HP2": {
+            "value": "0"
+          },
+          "PCW_USE_S_AXI_HP3": {
+            "value": "0"
+          },
+          "PCW_USE_TRACE": {
+            "value": "0"
+          },
+          "PCW_VALUE_SILVERSION": {
+            "value": "3"
+          },
+          "PCW_WDT_PERIPHERAL_CLKSRC": {
+            "value": "CPU_1X"
+          },
+          "PCW_WDT_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
+          "PCW_WDT_PERIPHERAL_ENABLE": {
+            "value": "0"
+          }
+        }
+      },
+      "ps7_0_axi_periph": {
+        "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
+        "xci_name": "design_1_ps7_0_axi_periph_2",
+        "parameters": {
+          "NUM_MI": {
+            "value": "1"
+          },
+          "SYNCHRONIZATION_STAGES": {
+            "value": "2"
+          }
+        },
+        "interface_ports": {
+          "S00_AXI": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "M00_AXI": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          }
+        },
+        "ports": {
+          "ACLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "ARESETN"
+              }
+            }
+          },
+          "ARESETN": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "S00_ACLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "S00_AXI"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "S00_ARESETN"
+              }
+            }
+          },
+          "S00_ARESETN": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "M00_ACLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "M00_AXI"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "M00_ARESETN"
+              }
+            }
+          },
+          "M00_ARESETN": {
+            "type": "rst",
+            "direction": "I"
+          }
+        },
+        "components": {
+          "s00_couplers": {
+            "interface_ports": {
+              "M_AXI": {
+                "mode": "Master",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+              },
+              "S_AXI": {
+                "mode": "Slave",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+              }
+            },
+            "ports": {
+              "M_ACLK": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "M_AXI"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "M_ARESETN"
+                  }
+                }
+              },
+              "M_ARESETN": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "S_ACLK": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "S_AXI"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "S_ARESETN"
+                  }
+                }
+              },
+              "S_ARESETN": {
+                "type": "rst",
+                "direction": "I"
+              }
+            },
+            "components": {
+              "auto_pc": {
+                "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
+                "xci_name": "design_1_auto_pc_2",
+                "parameters": {
+                  "MI_PROTOCOL": {
+                    "value": "AXI4LITE"
+                  },
+                  "SI_PROTOCOL": {
+                    "value": "AXI3"
+                  }
+                }
+              }
+            },
+            "interface_nets": {
+              "s00_couplers_to_auto_pc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
+                ]
+              }
+            },
+            "nets": {
+              "S_ACLK_1": {
+                "ports": [
+                  "S_ACLK",
+                  "auto_pc/aclk"
+                ]
+              },
+              "S_ARESETN_1": {
+                "ports": [
+                  "S_ARESETN",
+                  "auto_pc/aresetn"
+                ]
+              }
+            }
+          }
+        },
+        "interface_nets": {
+          "ps7_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
+            ]
+          },
+          "s00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "s00_couplers/M_AXI"
+            ]
+          }
+        },
+        "nets": {
+          "ps7_0_axi_periph_ACLK_net": {
+            "ports": [
+              "M00_ACLK",
+              "s00_couplers/M_ACLK"
+            ]
+          },
+          "ps7_0_axi_periph_ARESETN_net": {
+            "ports": [
+              "M00_ARESETN",
+              "s00_couplers/M_ARESETN"
+            ]
+          },
+          "S00_ACLK_1": {
+            "ports": [
+              "S00_ACLK",
+              "s00_couplers/S_ACLK"
+            ]
+          },
+          "S00_ARESETN_1": {
+            "ports": [
+              "S00_ARESETN",
+              "s00_couplers/S_ARESETN"
+            ]
+          }
+        }
+      },
+      "rst_ps7_0_100M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "design_1_rst_ps7_0_100M_2"
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_1",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "242.812"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "119.384"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "8"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "223.282"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "119.384"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "12.288"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "7.250"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "90.625"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "59"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          }
+        }
+      },
+      "clk_wiz_1": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_1_2",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "230.004"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "297.994"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "85.4"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "53.375"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "12.500"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "5"
+          }
+        }
+      },
+      "myip_burst_test_0": {
+        "vlnv": "user.org:user:myip_burst_test:1.0",
+        "xci_name": "design_1_myip_burst_test_0_0"
+      }
+    },
+    "interface_nets": {
+      "myip_burst_test_0_M00_AXI": {
+        "interface_ports": [
+          "myip_burst_test_0/M00_AXI",
+          "axi_smc/S02_AXI"
+        ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
+        ]
+      },
+      "myip_burst_read_test_1_M00_AXI": {
+        "interface_ports": [
+          "myip_burst_read_test_1/M00_AXI",
+          "axi_smc/S01_AXI"
+        ]
+      },
+      "ps7_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M00_AXI",
+          "myip_burst_test_0/S00_AXI"
+        ]
+      },
+      "axi_smc_M01_AXI": {
+        "interface_ports": [
+          "axi_smc/M01_AXI",
+          "processing_system7_0/S_AXI_GP1"
+        ]
+      },
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_smc/M00_AXI",
+          "processing_system7_0/S_AXI_GP0"
+        ]
+      },
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR_0",
+          "processing_system7_0/DDR"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO_0",
+          "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "myip_burst_read_test_0_M00_AXI": {
+        "interface_ports": [
+          "myip_burst_read_test_0/M00_AXI",
+          "axi_smc/S00_AXI"
+        ]
+      }
+    },
+    "nets": {
+      "processing_system7_0_FCLK_CLK0": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK0",
+          "myip_burst_read_test_0/m00_axi_aclk",
+          "tape_interface_0/clk",
+          "myip_burst_read_test_1/m00_axi_aclk",
+          "block_test_0/axi_clk_in",
+          "vga_tst_c64_0/clk_axi",
+          "axi_smc/aclk",
+          "processing_system7_0/M_AXI_GP0_ACLK",
+          "processing_system7_0/S_AXI_GP0_ACLK",
+          "processing_system7_0/S_AXI_GP1_ACLK",
+          "ps7_0_axi_periph/ACLK",
+          "ps7_0_axi_periph/S00_ACLK",
+          "ps7_0_axi_periph/M00_ACLK",
+          "rst_ps7_0_100M/slowest_sync_clk",
+          "clk_wiz_0/clk_in1",
+          "clk_wiz_1/clk_in1",
+          "myip_burst_test_0/s00_axi_aclk",
+          "myip_burst_test_0/m00_axi_aclk"
+        ]
+      },
+      "rst_ps7_0_100M_peripheral_reset": {
+        "ports": [
+          "rst_ps7_0_100M/peripheral_reset",
+          "tape_interface_0/reset",
+          "clk_wiz_0/reset",
+          "clk_wiz_1/reset"
+        ]
+      },
+      "clk_wiz_1_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out2",
+          "oddr_buf_0/clk_in",
+          "i2s_0/clk"
+        ]
+      },
+      "myip_burst_read_test_0_bus2ip_mstrd_d": {
+        "ports": [
+          "myip_burst_read_test_0/bus2ip_mstrd_d",
+          "vga_tst_c64_0/ip2bus_mstrd_d"
+        ]
+      },
+      "myip_burst_read_test_0_ip2bus_otputs": {
+        "ports": [
+          "myip_burst_read_test_0/ip2bus_otputs",
+          "vga_tst_c64_0/ip2bus_otputs"
+        ]
+      },
+      "vga_tst_c64_0_ip2bus_mst_addr": {
+        "ports": [
+          "vga_tst_c64_0/ip2bus_mst_addr",
+          "myip_burst_read_test_0/ip2bus_mst_addr"
+        ]
+      },
+      "vga_tst_c64_0_ip2bus_mst_length": {
+        "ports": [
+          "vga_tst_c64_0/ip2bus_mst_length",
+          "myip_burst_read_test_0/ip2bus_mst_length"
+        ]
+      },
+      "vga_tst_c64_0_ip2bus_inputs": {
+        "ports": [
+          "vga_tst_c64_0/ip2bus_inputs",
+          "myip_burst_read_test_0/ip2bus_inputs"
+        ]
+      },
+      "vga_tst_c64_0_red": {
+        "ports": [
+          "vga_tst_c64_0/red",
+          "vga_r"
+        ]
+      },
+      "vga_tst_c64_0_green": {
+        "ports": [
+          "vga_tst_c64_0/green",
+          "vga_g"
+        ]
+      },
+      "vga_tst_c64_0_blue": {
+        "ports": [
+          "vga_tst_c64_0/blue",
+          "vga_b"
+        ]
+      },
+      "vga_tst_c64_0_vert_sync": {
+        "ports": [
+          "vga_tst_c64_0/vert_sync",
+          "vga_vs"
+        ]
+      },
+      "vga_tst_c64_0_horiz_sync": {
+        "ports": [
+          "vga_tst_c64_0/horiz_sync",
+          "vga_hs"
+        ]
+      },
+      "myip_burst_test_0_ip2bus_otputs": {
+        "ports": [
+          "myip_burst_test_0/ip2bus_otputs",
+          "block_test_0/ip2bus_otputs"
+        ]
+      },
+      "myip_burst_test_0_slave_reg_0": {
+        "ports": [
+          "myip_burst_test_0/slave_reg_0",
+          "block_test_0/slave_0_reg"
+        ]
+      },
+      "myip_burst_test_0_slave_reg_1": {
+        "ports": [
+          "myip_burst_test_0/slave_reg_1",
+          "block_test_0/slave_1_reg"
+        ]
+      },
+      "block_test_0_ip2bus_mst_addr": {
+        "ports": [
+          "block_test_0/ip2bus_mst_addr",
+          "myip_burst_test_0/ip2bus_mst_addr"
+        ]
+      },
+      "block_test_0_ip2bus_mst_length": {
+        "ports": [
+          "block_test_0/ip2bus_mst_length",
+          "myip_burst_test_0/ip2bus_mst_length"
+        ]
+      },
+      "block_test_0_ip2bus_mstwr_d": {
+        "ports": [
+          "block_test_0/ip2bus_mstwr_d",
+          "myip_burst_test_0/ip2bus_mstwr_d"
+        ]
+      },
+      "block_test_0_ip2bus_inputs": {
+        "ports": [
+          "block_test_0/ip2bus_inputs",
+          "myip_burst_test_0/ip2bus_inputs"
+        ]
+      },
+      "block_test_0_clk_1_mhz": {
+        "ports": [
+          "block_test_0/clk_1_mhz",
+          "tape_interface_0/clk_1_mhz",
+          "i2s_0/clk_1_mhz"
+        ]
+      },
+      "myip_burst_test_0_restart": {
+        "ports": [
+          "myip_burst_test_0/restart",
+          "tape_interface_0/restart",
+          "block_test_0/reset_cpu"
+        ]
+      },
+      "myip_burst_read_test_1_bus2ip_mstrd_d": {
+        "ports": [
+          "myip_burst_read_test_1/bus2ip_mstrd_d",
+          "tape_interface_0/ip2bus_mstrd_d"
+        ]
+      },
+      "myip_burst_read_test_1_ip2bus_otputs": {
+        "ports": [
+          "myip_burst_read_test_1/ip2bus_otputs",
+          "tape_interface_0/ip2bus_otputs"
+        ]
+      },
+      "block_test_0_motor_control": {
+        "ports": [
+          "block_test_0/motor_control",
+          "tape_interface_0/motor_control"
+        ]
+      },
+      "tape_interface_0_pwm": {
+        "ports": [
+          "tape_interface_0/pwm",
+          "block_test_0/pwm",
+          "block_test_0/flag1",
+          "myip_burst_test_0/pwm"
+        ]
+      },
+      "tape_interface_0_ip2bus_mst_addr": {
+        "ports": [
+          "tape_interface_0/ip2bus_mst_addr",
+          "myip_burst_read_test_1/ip2bus_mst_addr"
+        ]
+      },
+      "tape_interface_0_ip2bus_mst_length": {
+        "ports": [
+          "tape_interface_0/ip2bus_mst_length",
+          "myip_burst_read_test_1/ip2bus_mst_length"
+        ]
+      },
+      "tape_interface_0_ip2bus_inputs": {
+        "ports": [
+          "tape_interface_0/ip2bus_inputs",
+          "myip_burst_read_test_1/ip2bus_inputs"
+        ]
+      },
+      "myip_burst_test_0_tape_button": {
+        "ports": [
+          "myip_burst_test_0/tape_button",
+          "block_test_0/tape_button"
+        ]
+      },
+      "myip_burst_test_0_joybits": {
+        "ports": [
+          "myip_burst_test_0/joybits",
+          "block_test_0/joybits"
+        ]
+      },
+      "myip_burst_test_0_joybits2": {
+        "ports": [
+          "myip_burst_test_0/joybits2",
+          "block_test_0/joybits2"
+        ]
+      },
+      "processing_system7_0_FCLK_RESET0_N": {
+        "ports": [
+          "processing_system7_0/FCLK_RESET0_N",
+          "rst_ps7_0_100M/ext_reset_in"
+        ]
+      },
+      "rst_ps7_0_100M_peripheral_aresetn": {
+        "ports": [
+          "rst_ps7_0_100M/peripheral_aresetn",
+          "myip_burst_read_test_0/m00_axi_aresetn",
+          "myip_burst_read_test_1/m00_axi_aresetn",
+          "vga_tst_c64_0/reset",
+          "block_test_0/proc_rst",
+          "axi_smc/aresetn",
+          "ps7_0_axi_periph/S00_ARESETN",
+          "ps7_0_axi_periph/M00_ARESETN",
+          "myip_burst_test_0/s00_axi_aresetn",
+          "myip_burst_test_0/m00_axi_aresetn"
+        ]
+      },
+      "rst_ps7_0_100M_interconnect_aresetn": {
+        "ports": [
+          "rst_ps7_0_100M/interconnect_aresetn",
+          "ps7_0_axi_periph/ARESETN"
+        ]
+      },
+      "myip_burst_test_0_c64_mode": {
+        "ports": [
+          "myip_burst_test_0/c64_mode",
+          "vga_tst_c64_0/c64_mode_in"
+        ]
+      },
+      "processing_system7_0_I2C1_SDA_T": {
+        "ports": [
+          "processing_system7_0/I2C1_SDA_T",
+          "iobuf_0/tristate"
+        ]
+      },
+      "processing_system7_0_I2C1_SDA_O": {
+        "ports": [
+          "processing_system7_0/I2C1_SDA_O",
+          "iobuf_0/in"
+        ]
+      },
+      "iobuf_0_out": {
+        "ports": [
+          "iobuf_0/out",
+          "processing_system7_0/I2C1_SDA_I"
+        ]
+      },
+      "processing_system7_0_I2C1_SCL_O": {
+        "ports": [
+          "processing_system7_0/I2C1_SCL_O",
+          "iobuf_1/in"
+        ]
+      },
+      "processing_system7_0_I2C1_SCL_T": {
+        "ports": [
+          "processing_system7_0/I2C1_SCL_T",
+          "iobuf_1/tristate"
+        ]
+      },
+      "iobuf_1_out": {
+        "ports": [
+          "iobuf_1/out",
+          "processing_system7_0/I2C1_SCL_I"
+        ]
+      },
+      "block_test_0_audio_out": {
+        "ports": [
+          "block_test_0/audio_out",
+          "i2s_0/audio_in"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "ac_sda",
+          "iobuf_0/pin"
+        ]
+      },
+      "Net2": {
+        "ports": [
+          "ac_scl",
+          "iobuf_1/pin"
+        ]
+      },
+      "i2s_0_mute_en": {
+        "ports": [
+          "i2s_0/mute_en",
+          "ac_muten"
+        ]
+      },
+      "oddr_buf_0_Mlck_O": {
+        "ports": [
+          "oddr_buf_0/Mlck_O",
+          "ac_mclk"
+        ]
+      },
+      "i2s_0_clk_1_5_mhz": {
+        "ports": [
+          "i2s_0/clk_1_5_mhz",
+          "ac_bclk"
+        ]
+      },
+      "i2s_0_out_data": {
+        "ports": [
+          "i2s_0/out_data",
+          "ac_pbdat"
+        ]
+      },
+      "i2s_0_channel_enable": {
+        "ports": [
+          "i2s_0/channel_enable",
+          "ac_reclrc",
+          "ac_pblrc"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "block_test_0/clk"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "block_test_0/locked"
+        ]
+      },
+      "clk_wiz_1_clk_out2": {
+        "ports": [
+          "clk_wiz_1/clk_out1",
+          "vga_tst_c64_0/clk"
+        ]
+      }
+    },
+    "addressing": {
+      "/myip_burst_read_test_0": {
+        "address_spaces": {
+          "M00_AXI": {
+            "range": "4G",
+            "width": "32",
+            "segments": {
+              "SEG_processing_system7_0_GP0_DDR_LOWOCM": {
+                "address_block": "/processing_system7_0/S_AXI_GP0/GP0_DDR_LOWOCM",
+                "offset": "0x00000000",
+                "range": "512M"
+              }
+            }
+          }
+        }
+      },
+      "/myip_burst_read_test_1": {
+        "address_spaces": {
+          "M00_AXI": {
+            "range": "4G",
+            "width": "32",
+            "segments": {
+              "SEG_processing_system7_0_GP1_DDR_LOWOCM": {
+                "address_block": "/processing_system7_0/S_AXI_GP1/GP1_DDR_LOWOCM",
+                "offset": "0x10000000",
+                "range": "256M"
+              }
+            }
+          }
+        }
+      },
+      "/processing_system7_0": {
+        "address_spaces": {
+          "Data": {
+            "range": "4G",
+            "width": "32",
+            "segments": {
+              "SEG_myip_burst_test_0_S00_AXI_reg": {
+                "address_block": "/myip_burst_test_0/S00_AXI/S00_AXI_reg",
+                "offset": "0x43C00000",
+                "range": "64K"
+              }
+            }
+          }
+        }
+      },
+      "/myip_burst_test_0": {
+        "address_spaces": {
+          "M00_AXI": {
+            "range": "4G",
+            "width": "32",
+            "segments": {
+              "SEG_processing_system7_0_GP1_DDR_LOWOCM": {
+                "address_block": "/processing_system7_0/S_AXI_GP1/GP1_DDR_LOWOCM",
+                "offset": "0x10000000",
+                "range": "256M"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

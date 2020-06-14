@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
-// Date        : Sun Apr  5 18:32:55 2020
+// Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+// Date        : Sun Jun 14 17:14:47 2020
 // Host        : johan-Latitude-E5550 running 64-bit Ubuntu 16.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub
-//               /home/johan/v/c64fpga/src/bd/ip/design_1_myip_burst_test_0_0/design_1_myip_burst_test_0_0_stub.v
+//               /home/johan/v20/c64fpga/src/bd/ip/design_1_myip_burst_test_0_0/design_1_myip_burst_test_0_0_stub.v
 // Design      : design_1_myip_burst_test_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* X_CORE_INFO = "myip_burst_test_v1_0,Vivado 2017.1" *)
+(* X_CORE_INFO = "myip_burst_test_v1_0,Vivado 2019.1" *)
 module design_1_myip_burst_test_0_0(ip2bus_mst_addr, ip2bus_mst_length, 
   ip2bus_mstwr_d, ip2bus_inputs, ip2bus_otputs, slave_reg_0, slave_reg_1, restart, c64_mode, 
   tape_button, pwm, joybits, joybits2, s00_axi_awaddr, s00_axi_awprot, s00_axi_awvalid, 

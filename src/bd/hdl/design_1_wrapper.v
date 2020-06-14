@@ -1,7 +1,7 @@
-//Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+//Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
-//Date        : Fri Apr 17 18:05:56 2020
+//Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+//Date        : Sun Jun 14 17:13:46 2020
 //Host        : johan-Latitude-E5550 running 64-bit Ubuntu 16.04.5 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper

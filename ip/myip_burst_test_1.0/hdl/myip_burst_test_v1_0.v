@@ -347,6 +347,7 @@ axi_master_burst myip_burst_test_v1_0_M00_AXI_inst
     assign m00_axi_arqos = 15;
     assign m00_axi_awqos = 15;
     assign m00_axi_arid[0] = 0;
+    assign m00_axi_awid[0] = 0;
 	// User logic ends
 
 	endmodule
