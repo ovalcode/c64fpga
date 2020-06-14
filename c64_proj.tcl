@@ -119,7 +119,6 @@ set files [list \
  "[file normalize "$origin_dir/src/bd/hdl/design_1_wrapper.v"]"\
  "[file normalize "$origin_dir/src/bd/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci"]"\
  "[file normalize "$origin_dir/src/bd/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xci"]"\
- "[file normalize "$origin_dir/src/bd/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci"]"\
  "[file normalize "$origin_dir/src/bd/ip/design_1_myip_burst_test_0_1/design_1_myip_burst_test_0_1.xci"]"\
  "[file normalize "$origin_dir/src/bd/ip/design_1_vga_tst_c64_0_0/design_1_vga_tst_c64_0_0.xci"]"\
  "[file normalize "$origin_dir/src/bd/ip/design_1_myip_burst_read_test_0_0/design_1_myip_burst_read_test_0_0.xci"]"\
